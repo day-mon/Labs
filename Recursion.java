@@ -6,12 +6,12 @@ public class Recursion {
      */
 
 
-    static long [] memoization = new long[91];
+   static long [] memoization = new long[91];
    public static void main(String[] args) {
 
-    for (int i = 0; i < memoization.length + 1; i++)
+
+    for (int i = 0; i < memoization.length; i++)
     {
- 
         System.out.println("fib(" + i + ") = " + fib(i));
     }
 }
@@ -44,7 +44,11 @@ public class Recursion {
      * if n <= 2, return 1 fib(1) = 1, fib(2) = fib(0) (0) + fib(1) (1) = 1.
      * Ex: n = 4
      * else, if mem[4] == 0 (is empty)
-     *      fill mem[4] with the prevoius value.
+     *      fill mem[4] with its value. 
+     *           mem[3] and mem[2] will be called to fill its value
+     *            so on and so forth... up until the base cases.  
+     *      
+     *      Once it has all of the numbers it will just goto the the original nth part in the array and return the value
      * 
      * New Runtime: O(n)
      */
