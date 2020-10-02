@@ -110,9 +110,18 @@ public class LinkedSet<T> implements Set<T> {
      */
     @Override
     public T remove() {
-        T val = null;
-        Node current = head;
-        while (current != null) {
+        T rem =  null;
+        if (isEmpty())  {
+          return null;
+        } else  {
+         rem = head.getValue();
+         head = head.getNext();
+         size--;
+         return rem;
+        }       
+       
+       /** Alternative  approach
+        *  while (current != null) {
             if(current.getNext().getNext() == null) {
                 val = current.getNext().getValue();
                 current.setNext(null);
@@ -122,6 +131,7 @@ public class LinkedSet<T> implements Set<T> {
         }
 
         return val;
+        **/
     }
 
 
