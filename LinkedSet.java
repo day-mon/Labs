@@ -1,5 +1,3 @@
-import org.omg.CORBA.ARG_IN;
-
 import java.util.Arrays;
 import java.util.LinkedList;
 
@@ -54,28 +52,18 @@ public class LinkedSet<T> implements Set<T> {
      */
     @Override
     public boolean add(T obj) {
-        if (contains(obj)) {
-            return false;
-        }
-        if (head == null) {
-            Node newHead = new Node(obj);
-            head = newHead;
-            size++;
-            return true;
-        } else {
-            Node newVal = new Node(obj);
-            Node current = head;
 
-            while (current != null) {
-                if(current.getNext() == null) {
-                    current.setNext(newVal);
-                    size++;
-                    return true;
-                }
-                current = current.getNext();
-            }
-        }
-        return false;
+        if (contains(obj) || obj == null) {
+            return false;
+        } else {
+         Node n = new Node(obj);
+         n.setNext(head);
+         head=n;
+         size++;
+            return true;
+    }
+
+
     }
 
     /**
