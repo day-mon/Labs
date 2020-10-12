@@ -52,12 +52,12 @@ public class VectorStack<T> implements Stack<T> {
         return stack.isEmpty();
     }
 
-    public int search(T obj) {
-       int index = stack.indexOf(obj);
+    public int search(T obj) {  
+       int index = stack.lastIndexOf(obj);
        if (index == -1) {
            return -1;
        } else {
-           return stack.size() - index;
+           return index;
        }
     }
 }
