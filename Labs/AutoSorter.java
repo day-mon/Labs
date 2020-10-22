@@ -54,12 +54,7 @@ public class AutoSorter<T extends Comparable<? super T>> {
     }
 
     public boolean contains(T obj) {
-        //TODO
-        if (store.search(obj) != -1) {
-            return true;
-        } else {
-            return false;
-        }
+        return store.search(obj) < 0;
     }
 
     public boolean isEmpty() {
@@ -71,7 +66,6 @@ public class AutoSorter<T extends Comparable<? super T>> {
     }
 
     public void clear() {
-        //TODO
         store = new VectorStack<>();
         size = 0;
     }
