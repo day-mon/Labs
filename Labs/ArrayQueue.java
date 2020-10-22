@@ -1,3 +1,5 @@
+package Labs;
+import Interfaces.*;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 
@@ -29,8 +31,8 @@ public class ArrayQueue<T> implements Queue<T> {
 
     @Override
     public boolean add(T obj) {
-        if (size == arrayCapacity-1) {
-            resizeArray(arrayCapacity*2);
+        if (size == arrayCapacity-1) { /**Why arraaycap-1, we want to have a wall inbetween the front and the back */
+            resizeArray(arrayCapacity*2); /**Just resizes  */
         }
         queue[back] = obj;
         back = (back + 1)%arrayCapacity;
@@ -52,8 +54,12 @@ public class ArrayQueue<T> implements Queue<T> {
         if (size == 0) {
             throw new NoSuchElementException("Empty queue");
         }
-        // TODO Auto-generated method stub
-        return null;
+    
+        T val = (T) queue[front];
+        queue[front] = null;
+        front = (front + 1) % arrayCapacity; 
+        size--;
+        return val;
     }
 
     @Override
@@ -85,9 +91,12 @@ public class ArrayQueue<T> implements Queue<T> {
 
     @Override
     public boolean contains(T obj) {
-
-
-        return false;
+        for (int i=0;i<size-1;i++) {
+            if(queue[i] == obj || queue[i].equals(obj)) {
+                return true;
+            }
+            return false;
+        }
     }
 
     @Override
@@ -123,8 +132,11 @@ public class ArrayQueue<T> implements Queue<T> {
 
     @Override
     public Object[] toArray() {
-        // TODO Auto-generated method stub
-        return null;
+        Object [] arr = new Object[size];
+        for (int i = front, k =0; i != back; k++, i=(i + 1)%arrayCapacity) {
+            arr[k] = queue[i];
+        }
+        return arr;
     }
 
     @SuppressWarnings("unchecked")
