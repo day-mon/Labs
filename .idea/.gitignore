@@ -2,3 +2,4 @@
 /workspace.xml
 compileall.bat
 src.txt
+*.class
