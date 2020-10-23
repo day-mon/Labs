@@ -1,3 +1,4 @@
+import java.util.HashMap;
 
 public class ArrayQueueDriver {
     public static void main(String[] args) {
@@ -6,6 +7,7 @@ public class ArrayQueueDriver {
 
         for (int i=0;i<23;i++) 
             s.add(i);
+
         
         System.out.println("Checking top should be 0: " + s.element());
         System.out.println("Checking top should be 0: " + s.peek());
@@ -13,8 +15,15 @@ public class ArrayQueueDriver {
         System.out.println("Checking remove of 1 should be 1: " + s.poll());
         System.out.println("Searching for 1 (should be false): " + s.contains(0));
         System.out.println("Checking size (should be 21): " + s.size());
+
         for (Object x : s.toArray())
-            System.out.println(x);
+            System.out.print(x + " ");
+        
+        System.out.println("\nSearching 1->25: " );
+
+        for (int i = 0; i < 25; i++)
+            System.out.println(i + ": " + s.contains(i));
+
         s.clear();
         System.out.println("Checking size (should be 0): " + s.size());
         try {
