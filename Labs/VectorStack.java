@@ -1,10 +1,7 @@
-package Labs; // Organize files better, this shouldn't be in drivers, even if it isn't a lab.
-              // In that case, move it to a "utils" or "helpers" pacakge. It's better 
-              // coding practices. Even if professors don't care about that, everyone else does.
-
+package Labs;
+import Interfaces.Stack;
 import java.util.Vector;
 import java.util.EmptyStackException;
-import Interfaces.Stack;
 
 public class VectorStack<T> implements Stack<T> {
 
@@ -57,13 +54,9 @@ public class VectorStack<T> implements Stack<T> {
         return stack.isEmpty();
     }
 
-    public int search(T obj) {  
-       int index = stack.lastIndexOf(obj);
-       if (index == -1) {
-           return -1;
-       } else {
-           return index;
-       }
+   
+    public int search(T obj) {
+        int index = stack.lastIndexOf(obj);
+        return index<0 ? -1:stack.size()-index;
     }
 }
-
