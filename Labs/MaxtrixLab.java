@@ -1,7 +1,9 @@
+package Labs;
+
 import javax.swing.text.Style;
 import java.util.Scanner;
 
-public class Main {
+public class MaxtrixLab {
 
     public static void main(String[] args) {
 

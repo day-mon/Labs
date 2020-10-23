@@ -1,3 +1,5 @@
+package Labs;
+
 /**
  * A Set is an unordered collection of distinct objects. This is the interface
  * for creating a Set data structure.

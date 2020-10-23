@@ -1,3 +1,5 @@
+package Labs;
+
 import java.awt.print.Book;
 import java.util.Objects;
 public class BankTransaction implements Comparable<BankTransaction> {
@@ -5,7 +7,7 @@ public class BankTransaction implements Comparable<BankTransaction> {
     private int sender, recipient;
     private double amount;
 
-    BankTransaction(int sender, int recipient, double amount) {
+    public BankTransaction(int sender, int recipient, double amount) {
         this.sender = sender;
         this.recipient = recipient;
         this.amount = amount;

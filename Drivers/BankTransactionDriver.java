@@ -1,9 +1,13 @@
-public class BankDriver
+package Drivers;
+
+import Labs.BankTransaction;
+
+public class BankTransactionDriver
 {
     public static void main(String[] args)
     {
-        BankTransaction b = new BankTransaction(1, 2, 100);
-        BankTransaction b2 = new BankTransaction(3, 4, 200);
+        BankTransaction b = new BankTransaction(1, 2, 100.0);
+        BankTransaction b2 = new BankTransaction(3, 4, 200.0);
 
         System.out.println("Sender of b1 (Should be 1):" + b.getSender());
         System.out.println("Sender of b2 (Should be 3):" + b2.getSender());

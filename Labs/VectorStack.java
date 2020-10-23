@@ -1,5 +1,8 @@
+package Labs;
+
 import java.util.Vector;
 import java.util.EmptyStackException;
+import Interfaces.Stack;
 
 public class VectorStack<T> implements Stack<T> {
 

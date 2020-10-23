@@ -1,6 +1,8 @@
+package Labs;
+
 import java.util.Arrays;
 import java.util.NoSuchElementException;
-
+import Interfaces.Queue;
 
 
 /**

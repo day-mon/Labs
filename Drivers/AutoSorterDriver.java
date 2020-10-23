@@ -1,3 +1,7 @@
+package Drivers;
+
+import Labs.AutoSorter;
+
 public class AutoSorterDriver {
     public static void main(String[] args) {
         AutoSorter<String> names = new AutoSorter<String>();

@@ -1,3 +1,5 @@
+package Interfaces;
+
 /**
  * Simple Stack interface.
  * @author Stephen J. Sarma-Weierman

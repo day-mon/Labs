@@ -32,7 +32,7 @@ public class ArrayQueueDriver {
         try {
             s.remove();
         } catch (Exception e) {
-            System.out.println("Sucess!");
+            System.out.println("Success!");
         }
         System.out.println("Checking testing poll (should be null): " + s.poll());
         System.out.println("Thats all goodbye for now!");
