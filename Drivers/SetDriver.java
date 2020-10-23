@@ -1,4 +1,8 @@
-import java.util.Arrays;
+package Drivers;
+
+// import java.util.Arrays; // Totally unnecessary line again
+import Interfaces.Set;
+import Labs.LinkedSet;
 
 /**
  * Driver method for testing the ArraySet data structure.
@@ -11,6 +15,7 @@ public class SetDriver {
      */
     public static void main(String[] args) {
         System.out.println("Creating set of Integers...");
+        long START_TIME = System.currentTimeMillis();
         Set<Integer> s = new LinkedSet<>();
         System.out.println("Adding values to set...");
         s.add(42);
@@ -60,6 +65,8 @@ public class SetDriver {
         System.out.println("Checking size (should be 0): " + s.size());
         for (Object i : s.toArray())
             System.out.print(i + " ");
+        long DELTA_TIME = System.currentTimeMillis() - START_TIME;
+        System.out.println("Run-time (ms): "+DELTA_TIME+" ms");
         System.out.println("That's enough for now. Goodbye!");
     }
     

@@ -1,5 +1,7 @@
+package Labs;
 
 import java.util.Arrays;
+import Interfaces.Set;
 
 /**
  * An implementation of Set using arrays. This implementation should 

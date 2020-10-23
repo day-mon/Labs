@@ -1,4 +1,7 @@
+package Drivers;
+
 import java.util.EmptyStackException;
+import Labs.VectorStack;
 
 /**
  * Driver class for testing ArrayStack.
@@ -10,6 +13,7 @@ import java.util.EmptyStackException;
  public class StackDriver {
 	public static void main(String [] args) {
 		System.out.println("Attempting to create a new stack of integers...");
+		long START_TIME = System.currentTimeMillis();
 		VectorStack<Integer> stack = new VectorStack<>();
 		System.out.print("Check to see if the stack is empty: ");
 		if (stack.empty())
@@ -68,5 +72,9 @@ import java.util.EmptyStackException;
 		 * 
 		 * */ 
 		//TODO: Finish wiriting this driver
+
+
+		long DELTA_TIME = System.currentTimeMillis() - START_TIME;
+		System.out.println("Run-time (ms): "+DELTA_TIME+" ms");
 	}
 }

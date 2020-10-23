@@ -1,5 +1,8 @@
+package Labs;
+
 import java.util.Arrays;
 import java.util.LinkedList;
+import Interfaces.Set;
 
 public class LinkedSet<T> implements Set<T> {
 

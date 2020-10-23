@@ -1,8 +1,12 @@
-import java.util.HashMap;
+package Drivers;
+
+// import java.util.HashMap; // Totally unnecessary line?
+import Labs.ArrayQueue;
 
 public class ArrayQueueDriver {
     public static void main(String[] args) {
         System.out.println("Attempting to create a new queue of integers...");
+        long START_TIME = System.currentTimeMillis();
         ArrayQueue<Integer> s = new ArrayQueue<Integer>();
 
         for (int i=0;i<23;i++) 
@@ -29,9 +33,11 @@ public class ArrayQueueDriver {
         try {
             s.remove();
         } catch (Exception e) {
-            System.out.println("Sucess!");
+            System.out.println("Success!");
         }
         System.out.println("Checking testing poll (should be null): " + s.poll());
+        long DELTA_TIME = System.currentTimeMillis() - START_TIME;
+        System.out.println("Run-time (ms): "+DELTA_TIME+" ms");
         System.out.println("Thats all goodbye for now!");
         
     }
