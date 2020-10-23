@@ -1,5 +1,3 @@
-package Labs;
-import Interfaces.*;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 
@@ -91,12 +89,12 @@ public class ArrayQueue<T> implements Queue<T> {
 
     @Override
     public boolean contains(T obj) {
-        for (int i=0;i<size-1;i++) {
+        for (int i = front; i != back; i=(i + 1)%arrayCapacity) {
             if(queue[i] == obj || queue[i].equals(obj)) {
                 return true;
             }
-            return false;
         }
+        return false;
     }
 
     @Override
