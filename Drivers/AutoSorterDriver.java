@@ -4,6 +4,7 @@ import Labs.AutoSorter;
 
 public class AutoSorterDriver {
     public static void main(String[] args) {
+        long START_TIME = System.currentTimeMillis();
         AutoSorter<String> names = new AutoSorter<String>();
         names.add("Frank");
         names.add("Eve");
@@ -43,6 +44,8 @@ public class AutoSorterDriver {
         System.out.println("Size: " + names.size());
         if (names.isEmpty())
             System.out.println("Names is empty");/**/
+        long DELTA_TIME = System.currentTimeMillis() - START_TIME;
+        System.out.println("Run-time (ms): "+DELTA_TIME+" ms");
     }
     
 }
