@@ -1,3 +1,4 @@
+package Interfaces;
 /**
  * This is a simplified interface for Queue, based on the Java API.
  * See <a href="https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/util/Queue.html">this documentation</a>
