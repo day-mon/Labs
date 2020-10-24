@@ -1,4 +1,3 @@
-package Labs;
 
 import java.util.Arrays;
 import java.util.Vector;
@@ -56,7 +55,7 @@ public class AutoSorter<T extends Comparable<? super T>> {
     }
 
     public boolean contains(T obj) {
-        return store.search(obj) < 0;
+        return store.search(obj) > 0;
     }
 
     public boolean isEmpty() {
