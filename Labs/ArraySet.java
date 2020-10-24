@@ -33,13 +33,11 @@ public class ArraySet<T> implements Set<T> {
         this(DEFAULT_CAPACITY);
     }
     
-    //TODO: initialize capacity field, initialize the set to be a new Object array of size capacity
     public ArraySet(int capacity) {
         this.capacity= capacity;
         set = new Object[capacity];
     }
 
-    //TODO: check to see if the obj is null, or if it is already in the set: return false if either is true
     //check to see if the array is at capactiy, if it is, resize the array
     //add the object to the next free entry in the array, increment size, and return true
     @Override
@@ -85,7 +83,6 @@ public class ArraySet<T> implements Set<T> {
         return obj;
     }
 
-    //TODO: Determine if the collection contains obj
     @Override
     public boolean contains(T obj) {
         for (int i = 0; i < size; i++) {
@@ -96,13 +93,11 @@ public class ArraySet<T> implements Set<T> {
         return false;
     }
 
-    //TODO: determine if the collection is empty
     @Override
     public boolean isEmpty() {
         return size == 0;
     }
 
-    //TODO: remove all the objects in the array, set size to 0
     @Override
     public void clear() {
         for (int i = size -1; i > size; i--) {
@@ -111,20 +106,17 @@ public class ArraySet<T> implements Set<T> {
         size = 0;
     }
 
-    //TODO: get the size of the collection
     @Override
     public int size() {
         return size;
     }
 
-    //TODO: return a new array containing all the elements in the collection.
     @Override
     public Object[] toArray() {
       return Arrays.copyOf(set, size);
         
     }
     
-    //TODO: find the occurance of obj in the array, and return the corresponding index. If obj is not in the array, return -1
     private int indexOf(T obj) {
         boolean found = false;
         for (int i = 0; i < size; i++) {
@@ -135,13 +127,11 @@ public class ArraySet<T> implements Set<T> {
         return -1;
     }
     
-    //TODO: Determine if the array is at capacity.
     private boolean isArrayFull() {
         return size == capacity;
     }
     
     private boolean resizeArray(int newCapacity) {
-        //Don't let this method shrink the array smaller than the number of items in the set
         if (newCapacity < size)
             return false;
         capacity = newCapacity;
