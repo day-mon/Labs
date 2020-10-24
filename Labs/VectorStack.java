@@ -54,7 +54,13 @@ public class VectorStack<T> implements Stack<T> {
         return stack.isEmpty();
     }
 
-   
+    /**
+     * Uses Vectors lastIndexOf method to find the last index of T. 
+     * Due to the nature of the data structure to find the index,
+     * we will need to subtract the index and the size of the stack
+     * @param obj
+     * @return -1 if isnt found; index if found.
+     */
     public int search(T obj) {
         int index = stack.lastIndexOf(obj);
         return index<0 ? -1:stack.size()-index;
