@@ -1,17 +1,17 @@
-C:\Users\damon\Desktop\School\Labs\Drivers\ArrayQueueDriver.java
-C:\Users\damon\Desktop\School\Labs\Drivers\AutoSorterDriver.java
-C:\Users\damon\Desktop\School\Labs\Drivers\BankTransactionDriver.java
-C:\Users\damon\Desktop\School\Labs\Drivers\SetDriver.java
-C:\Users\damon\Desktop\School\Labs\Drivers\StackDriver.java
-C:\Users\damon\Desktop\School\Labs\Interfaces\Queue.java
-C:\Users\damon\Desktop\School\Labs\Interfaces\Set.java
-C:\Users\damon\Desktop\School\Labs\Interfaces\Stack.java
-C:\Users\damon\Desktop\School\Labs\Labs\ArrayQueue.java
-C:\Users\damon\Desktop\School\Labs\Labs\ArraySet.java
-C:\Users\damon\Desktop\School\Labs\Labs\AutoSorter.java
-C:\Users\damon\Desktop\School\Labs\Labs\BankTransaction.java
-C:\Users\damon\Desktop\School\Labs\Labs\LinkedSet.java
-C:\Users\damon\Desktop\School\Labs\Labs\MaxtrixLab.java
-C:\Users\damon\Desktop\School\Labs\Labs\Recursion.java
-C:\Users\damon\Desktop\School\Labs\Labs\VectorStack.java
-C:\Users\damon\Desktop\School\Labs\listEveryFile.java
+"E:\\! Elsklivet\\Coding Den\\Damons Labs\\Labs\\Drivers\\ArrayQueueDriver.java"
+"E:\\! Elsklivet\\Coding Den\\Damons Labs\\Labs\\Drivers\\AutoSorterDriver.java"
+"E:\\! Elsklivet\\Coding Den\\Damons Labs\\Labs\\Drivers\\BankTransactionDriver.java"
+"E:\\! Elsklivet\\Coding Den\\Damons Labs\\Labs\\Drivers\\SetDriver.java"
+"E:\\! Elsklivet\\Coding Den\\Damons Labs\\Labs\\Drivers\\StackDriver.java"
+"E:\\! Elsklivet\\Coding Den\\Damons Labs\\Labs\\Interfaces\\Queue.java"
+"E:\\! Elsklivet\\Coding Den\\Damons Labs\\Labs\\Interfaces\\Set.java"
+"E:\\! Elsklivet\\Coding Den\\Damons Labs\\Labs\\Interfaces\\Stack.java"
+"E:\\! Elsklivet\\Coding Den\\Damons Labs\\Labs\\Labs\\ArrayQueue.java"
+"E:\\! Elsklivet\\Coding Den\\Damons Labs\\Labs\\Labs\\ArraySet.java"
+"E:\\! Elsklivet\\Coding Den\\Damons Labs\\Labs\\Labs\\AutoSorter.java"
+"E:\\! Elsklivet\\Coding Den\\Damons Labs\\Labs\\Labs\\BankTransaction.java"
+"E:\\! Elsklivet\\Coding Den\\Damons Labs\\Labs\\Labs\\LinkedSet.java"
+"E:\\! Elsklivet\\Coding Den\\Damons Labs\\Labs\\Labs\\MaxtrixLab.java"
+"E:\\! Elsklivet\\Coding Den\\Damons Labs\\Labs\\Labs\\Recursion.java"
+"E:\\! Elsklivet\\Coding Den\\Damons Labs\\Labs\\Labs\\VectorStack.java"
+"E:\\! Elsklivet\\Coding Den\\Damons Labs\\Labs\\listEveryFile.java"
