@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import Interfaces.Set;
 
-public class LinkedSet<T> implements Set<T> {
+public class LinkedSet<T> implements Set<T>{
 
     /**
      *      **IGNORE** **IGNORE** **IGNORE**
@@ -59,10 +59,10 @@ public class LinkedSet<T> implements Set<T> {
         if (contains(obj) || obj == null) {
             return false;
         } else {
-         Node n = new Node(obj);
-         n.setNext(head);
-         head=n;
-         size++;
+                Node n = new Node(obj);
+                n.setNext(head);
+                head=n;
+                size++;
             return true;
     }
 
@@ -115,11 +115,11 @@ public class LinkedSet<T> implements Set<T> {
     public T remove() {
         T rem =  null;
         if (isEmpty())  {
-          return null;
-        } else  {
-         rem = head.getValue();
-         head = head.getNext();
-         size--;
+            return null;
+        } else {
+            rem = head.getValue();
+            head = head.getNext();
+            size--;
          return rem;
         }       
        
