@@ -107,7 +107,7 @@ public class ArrayQueue<T> implements Queue<T> {
     @Override
     public void clear() {
         // TODO Auto-generated method stub
-        queue = new Object[capcity];
+        queue = new Object[DEFAULT_CAPACITY];
         size = 0;
     }
 
