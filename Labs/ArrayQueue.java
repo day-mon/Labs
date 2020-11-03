@@ -76,7 +76,7 @@ public class ArrayQueue<T> implements Queue<T> {
     public T element() {
         if (size == 0) {
             throw new NoSuchElementException("Empty queue");
-        }
+        } 
         return (T)queue[front];
     }
 

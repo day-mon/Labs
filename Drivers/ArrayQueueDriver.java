@@ -1,12 +1,14 @@
 package Drivers;
+import java.lang.Runtime;
+import java.lang.management.MemoryUsage;
 
-// import java.util.HashMap; // Totally unnecessary line?
 import Labs.ArrayQueue;
 
 public class ArrayQueueDriver {
     public static void main(String[] args) {
         System.out.println("Attempting to create a new queue of integers...");
         long START_TIME = System.currentTimeMillis();
+        long beforeUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
         ArrayQueue<Integer> s = new ArrayQueue<Integer>();
 
         for (int i=0;i<23;i++) 
@@ -36,8 +38,13 @@ public class ArrayQueueDriver {
             System.out.println("Success!");
         }
         System.out.println("Checking testing poll (should be null): " + s.poll());
+
         long DELTA_TIME = System.currentTimeMillis() - START_TIME;
+        double afterUsedMem=(Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory()) / 1048576;
+        String usage = afterUsedMem > 1 ?  " bytes" : " byte";
+        
         System.out.println("Run-time (ms): "+DELTA_TIME+" ms");
+        System.out.println("Run-time (bytes): "+afterUsedMem+ usage);
         System.out.println("Thats all goodbye for now!");
         
     }

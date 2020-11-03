@@ -7,6 +7,7 @@ public class BankTransactionDriver
     public static void main(String[] args)
     {
         long START_TIME = System.currentTimeMillis();
+        long beforeUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
         BankTransaction b = new BankTransaction(1, 2, 100.0);
         BankTransaction b2 = new BankTransaction(3, 4, 200.0);
 
@@ -32,7 +33,11 @@ public class BankTransactionDriver
         System.out.println("b1 equals b2 (Should be true):" + b.equals(b2));
 
         System.out.println("b1.toString(): " + b.toString());
+
         long DELTA_TIME = System.currentTimeMillis() - START_TIME;
+        double afterUsedMem=(Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory()) / 1048576;
+        String usage = afterUsedMem > 1 ?  " bytes" : " byte"; 
+        System.out.println("Run-time (bytes): "+afterUsedMem+usage);
         System.out.println("Run-time (ms): "+DELTA_TIME+" ms");
         }
     }

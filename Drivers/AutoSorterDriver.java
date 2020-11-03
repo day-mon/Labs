@@ -5,6 +5,7 @@ import Labs.AutoSorter;
 public class AutoSorterDriver {
     public static void main(String[] args) {
         long START_TIME = System.currentTimeMillis();
+        long beforeUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
         AutoSorter<String> names = new AutoSorter<String>();
         names.add("Frank");
         names.add("Eve");
@@ -45,6 +46,10 @@ public class AutoSorterDriver {
         if (names.isEmpty())
             System.out.println("Names is empty");/**/
         long DELTA_TIME = System.currentTimeMillis() - START_TIME;
+        double afterUsedMem=(Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory()) / 1048576;
+        String usage = afterUsedMem > 1 ?  " bytes" : " byte";
+        
+        System.out.println("Run-time (bytes): "+afterUsedMem+usage);
         System.out.println("Run-time (ms): "+DELTA_TIME+" ms");
     }
     

@@ -14,6 +14,7 @@ import Labs.VectorStack;
 	public static void main(String [] args) {
 		System.out.println("Attempting to create a new stack of integers...");
 		long START_TIME = System.currentTimeMillis();
+		long beforeUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
 		VectorStack<Integer> stack = new VectorStack<>();
 		System.out.print("Check to see if the stack is empty: ");
 		if (stack.empty())
@@ -73,8 +74,10 @@ import Labs.VectorStack;
 		 * */ 
 		//TODO: Finish wiriting this driver
 
-
-		long DELTA_TIME = System.currentTimeMillis() - START_TIME;
-		System.out.println("Run-time (ms): "+DELTA_TIME+" ms");
+        long DELTA_TIME = System.currentTimeMillis() - START_TIME;
+        double afterUsedMem=(Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory()) / 1048576;
+        String usage = afterUsedMem > 1 ?  " bytes" : " byte"; 
+        System.out.println("Run-time (bytes): "+afterUsedMem+usage);
+        System.out.println("Run-time (ms): "+DELTA_TIME+" ms");
 	}
 }
