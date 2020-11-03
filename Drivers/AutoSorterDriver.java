@@ -49,7 +49,7 @@ public class AutoSorterDriver {
         double afterUsedMem=(Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory()) / 1048576;
         String usage = afterUsedMem > 1 ?  " bytes" : " byte";
         
-        System.out.println("Run-time (bytes): "+afterUsedMem+usage);
+        System.out.println("Memory usage (bytes): "+afterUsedMem+usage);
         System.out.println("Run-time (ms): "+DELTA_TIME+" ms");
     }
     
