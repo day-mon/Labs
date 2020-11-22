@@ -29,6 +29,7 @@ public class ArrayQueue<T> implements Queue<T> {
         queue = new Object[initialCapacity];
     }
 
+
     @Override
     public boolean add(T obj) {
         if (size == arrayCapacity-1) { /**Why arraaycap-1, we want to have a wall inbetween the front and the back */
@@ -128,6 +129,7 @@ public class ArrayQueue<T> implements Queue<T> {
         front = 0;
         back = size;
         arrayCapacity = newCapacity;
+        queue = Arrays.copyOf(arr, newCapacity);
     }
 
     @Override
