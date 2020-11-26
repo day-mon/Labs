@@ -16,7 +16,7 @@ public class VectorStack<T> implements Stack<T> {
      * @param obj - the object to be added.
      */
     public T push(T obj) {
-        stack.add(obj);
+        stack.add(obj); 
         return obj;
     }
 
