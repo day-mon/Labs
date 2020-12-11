@@ -1,0 +1,11 @@
+{
+    "files.watcherExclude": {
+        "**/target": true
+    },
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "*.pep": "pep9-asm",
+        "iosfwd": "cpp",
+        "iostream": "cpp"
+    }
+}
