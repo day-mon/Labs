@@ -1,4 +1,4 @@
-package Labs;
+package Labs.Other;
 
 
 public class TreeNode<T extends Comparable> implements Comparable<T> {

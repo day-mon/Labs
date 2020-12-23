@@ -1,6 +1,7 @@
+package Labs.Other;
 import java.util.Iterator;
 import java.util.NavigableMap;
-import Labs.TreeNode;
+import Labs.Other.TreeNode;
 
 
 /**
@@ -9,21 +10,21 @@ import Labs.TreeNode;
  * start there.
  */
 
-public class BinaryTree<T extends Comparable> {
+public class BinarySearchTree<T extends Comparable> {
     private TreeNode<T> root;
     private int size;
 
-    public BinaryTree() {
+    public BinarySearchTree() {
         this.root = null;
         this.size = 0;
     }
 
-    public BinaryTree(TreeNode<T> root) {
+    public BinarySearchTree(TreeNode<T> root) {
         this.root = root;
         this.size = 1;
     }
 
-    public BinaryTree(T value) {
+    public BinarySearchTree(T value) {
         this.root = new TreeNode<T>(value);
         this.size = 1;
     }
@@ -65,9 +66,9 @@ public class BinaryTree<T extends Comparable> {
     }
 
 
-    private boolean rInsert(TreeNode<T> node, TreeNode<T> current) {
+    private boolean rInsert(T val, TreeNode<T> current) {
         
-        if (current.compareTo(node.value) >= 0) {
+        /*if (current.compareTo(node.value) >= 0) {
             if (current.left != null) {
                 current.left = node;
                 return true;
@@ -82,7 +83,12 @@ public class BinaryTree<T extends Comparable> {
                 rInsert(current.right, node);
             }
         }
-        return false;
+        return false; */
+        if (current == null) {
+            TreeNode x = new TreeNode(val);
+        } else if (current.getValue() < val) {
+            
+        }
     }
 
 
