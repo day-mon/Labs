@@ -10,6 +10,7 @@ public class LinkedList<T> {
         this.head = null;
         this.tail = null;
         this.size = 0;
+
     }
 
     public LinkedList(T val) {

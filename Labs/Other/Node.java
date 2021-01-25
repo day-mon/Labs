@@ -1,7 +1,7 @@
 package Labs.Other;
 
 public class Node<T> {
-    T value;
+    private T value;
     private Node next;
 
     public Node(T value) {

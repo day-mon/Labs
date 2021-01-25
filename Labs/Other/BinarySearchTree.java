@@ -68,7 +68,7 @@ public class BinarySearchTree<T extends Comparable> {
 
     private boolean rInsert(T val, TreeNode<T> current) {
         
-        /*if (current.compareTo(node.value) >= 0) {
+        if (current.compareTo(node.value) >= 0) {
             if (current.left != null) {
                 current.left = node;
                 return true;
@@ -83,12 +83,7 @@ public class BinarySearchTree<T extends Comparable> {
                 rInsert(current.right, node);
             }
         }
-        return false; */
-        if (current == null) {
-            TreeNode x = new TreeNode(val);
-        } else if (current.getValue() < val) {
-            
-        }
+        return false; 
     }
 
 
