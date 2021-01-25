@@ -91,7 +91,7 @@ public class BinarySearchTree<T extends Comparable> {
 
     private boolean rDelete(T obj, TreeNode<T> current) {
         //Base Case: Tree is empty;
-        if (this.root == null) throw new E
+      //  if (this.root == null) throw new E
     }
 
 

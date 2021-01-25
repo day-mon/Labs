@@ -1,4 +1,4 @@
-package Labs;
+
 import Interfaces.Stack;
 import java.util.Vector;
 import java.util.EmptyStackException;

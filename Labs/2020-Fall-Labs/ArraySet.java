@@ -1,4 +1,4 @@
-package Labs;
+package ;
 
 import java.util.Arrays;
 import Interfaces.Set;

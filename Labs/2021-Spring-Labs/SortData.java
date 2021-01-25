@@ -1,3 +1,4 @@
+package 2021-Spring-Labs;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -6,7 +7,7 @@ import java.util.Arrays;
 
 public class SortData {
     public static void main(String[] args) {
-        int [] numbers = new int[100];
+        int [] numbers = new int[100];  
         File num = new File("input.txt");
         Scanner in;
         try {

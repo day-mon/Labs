@@ -1,4 +1,10 @@
 .idea
 .vscode
-out
-bin
+/out
+/bin
+bin/**
+out/**
+/.idea
+/.vscode
+.vscode/**
+.idea/**
