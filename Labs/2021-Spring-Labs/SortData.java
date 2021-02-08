@@ -1,4 +1,3 @@
-package 2021-Spring-Labs;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -8,7 +7,7 @@ import java.util.Arrays;
 public class SortData {
     public static void main(String[] args) {
         int [] numbers = new int[100];  
-        File num = new File("input.txt");
+        File num = new File("dependencies/input.txt");
         Scanner in;
         try {
              in = new Scanner(num);
@@ -25,7 +24,7 @@ public class SortData {
 
 
         // Write output to output.txt
-        File printFile = new File("output.txt");
+        File printFile = new File("dependencies/output.txt");
         PrintWriter print = new PrintWriter(printFile);
         for (int nums : numbers) {
             print.println(nums);

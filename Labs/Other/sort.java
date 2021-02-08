@@ -25,6 +25,8 @@ public class sort {
             arr[min] = temp;
         }
         return arr;
+
+        
     }
 
     public static int[] quick(int[] arr, int first, int last) {
