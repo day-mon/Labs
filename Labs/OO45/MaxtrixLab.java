@@ -1,4 +1,4 @@
-package Labs;
+package OO45;
 
 import javax.swing.text.Style;
 import java.util.Scanner;

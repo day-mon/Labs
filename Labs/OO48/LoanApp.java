@@ -1,3 +1,4 @@
+package OO48;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,7 +10,7 @@ import java.util.Scanner;
 
 public class LoanApp {
     public static void main(String[] args) {
-        File binaryFile = new File("loan.dat");
+        File binaryFile = new File("dependencies/loan.dat");
         Scanner in = new Scanner(System.in);
 
         if (!binaryFile.exists()) {

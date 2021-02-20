@@ -1,3 +1,5 @@
+package OO48;
+
 import java.io.Serializable;
 
 public class Loan implements Serializable {

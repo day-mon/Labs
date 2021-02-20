@@ -1,8 +1,0 @@
-"C:\\Users\\damon\\Desktop\\School\\Labs\\Labs\\2020-Fall-Labs\\ArrayQueue.java"
-"C:\\Users\\damon\\Desktop\\School\\Labs\\Labs\\2020-Fall-Labs\\ArraySet.java"
-"C:\\Users\\damon\\Desktop\\School\\Labs\\Labs\\2020-Fall-Labs\\AutoSorter.java"
-"C:\\Users\\damon\\Desktop\\School\\Labs\\Labs\\2020-Fall-Labs\\BankTransaction.java"
-"C:\\Users\\damon\\Desktop\\School\\Labs\\Labs\\2020-Fall-Labs\\LinkedSet.java"
-"C:\\Users\\damon\\Desktop\\School\\Labs\\Labs\\2020-Fall-Labs\\MaxtrixLab.java"
-"C:\\Users\\damon\\Desktop\\School\\Labs\\Labs\\2020-Fall-Labs\\Recursion.java"
-"C:\\Users\\damon\\Desktop\\School\\Labs\\Labs\\2020-Fall-Labs\\VectorStack.java"

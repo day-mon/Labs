@@ -1,4 +1,4 @@
-package Labs;
+package OO45;
 
 public class Recursion {
 
