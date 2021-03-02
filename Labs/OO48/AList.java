@@ -1,3 +1,5 @@
+pacakge OO48;
+
 import java.util.ListIterator;
 import java.util.NoSuchElementException;
 import java.util.Arrays;
@@ -208,6 +210,8 @@ public class AList<T> implements List<T> {
 
     //TODO: You should know how to do this by now.
     public int size() {
+        char [] arr;
+        arr.getClass();
         return size;
     }
 
