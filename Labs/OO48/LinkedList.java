@@ -49,7 +49,7 @@ public class LinkedList<T> implements List<T> {
 
     @Override
     public T get(int index) {
-        if (index < 0 && index > size) throw new IndexOutOfBoundsException();
+        if (index < 0 || index > size) throw new IndexOutOfBoundsException();
  
        return getNodeAt(index).getValue();
     }
@@ -168,6 +168,7 @@ public class LinkedList<T> implements List<T> {
 
     @Override
     public T remove(int index) {
+        if (index < 0 || index >= size) throw new IndexOutOfBoundsException();
         T val = null;
 
         if (isEmpty()) {
@@ -181,7 +182,7 @@ public class LinkedList<T> implements List<T> {
              */
             val = head.getValue();
             head = head.getNext();
-            head.setPrevious(null);
+            head.previous = null;
             size--;
             return val;
         } else if (index == size-1) {
@@ -210,7 +211,7 @@ public class LinkedList<T> implements List<T> {
 
     @Override
     public T set(int index, T obj) {
-        if (index < 0 && index > size) throw new IndexOutOfBoundsException();
+        if (index < 0 || index > size) throw new IndexOutOfBoundsException();
 
         Node node = getNodeAt(index);
         T val = getNodeAt(index).getValue();
@@ -261,6 +262,8 @@ public class LinkedList<T> implements List<T> {
     }
 
     private Node getNodeAt (int index) {
+        if (index == 0) return head;
+        if (index == size-1) return tail;
         double midpoint = Math.ceil(size / 2);
         if (index > midpoint) {
             Node cur = tail;
