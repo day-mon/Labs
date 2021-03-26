@@ -1,5 +1,10 @@
+package Labs.OO48;
+
+import Interfaces.Dictionary;
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+
 import java.util.Objects;
 
 /**
@@ -16,7 +21,8 @@ import java.util.Objects;
  * @author Stephen J. Sarma-Weierman
  * @author Damon L. Montague Jr.
  */
-public class HashDictionary<K, V> implements Dictionary<K, V> {
+public class HashDictionary<K, V> implements Dictionary<K, V>
+{
 
     private Object[] entries; // array of Nodes
     private int size;

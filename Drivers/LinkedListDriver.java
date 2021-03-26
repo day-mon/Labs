@@ -11,7 +11,6 @@ public class LinkedListDriver {
             n.insertFront(i);
         } 
 
-        n.print();
 
       
 

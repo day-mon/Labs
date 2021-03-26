@@ -1,8 +1,13 @@
+package Labs.OO48;
+
+
 import java.util.Arrays;
 import java.util.ListIterator;
 import java.util.NoSuchElementException;
+import Interfaces.List;
 
-public class LinkedList<T> implements List<T> {
+public class LinkedList<T> implements List<T>
+{
     private int size;
     private Node head;
     private Node tail;

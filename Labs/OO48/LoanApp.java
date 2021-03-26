@@ -1,4 +1,4 @@
-package OO48;
+package Labs.OO48;
 
 import java.io.File;
 import java.io.FileInputStream;

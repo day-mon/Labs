@@ -39,7 +39,7 @@ public class LinkedList<T> {
         Node current = head;
         Node prev = head;
 
-        if (this.head.value.equals(val)) {
+        if (this.head.getValue().equals(val)) {
             this.head = head.getNext();
             size--;
         }

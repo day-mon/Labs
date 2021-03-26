@@ -36,7 +36,7 @@ public class BinarySearchTree<T extends Comparable> {
             return true;
         }
 
-        rInsert(root, node);
+        // rInsert((T) root, node);
         return true;
     }
 
@@ -63,12 +63,13 @@ public class BinarySearchTree<T extends Comparable> {
                 }
             }
         }
+        return true;
     }
 
-
+/*
     private boolean rInsert(T val, TreeNode<T> current) {
         
-        if (current.compareTo(node.value) >= 0) {
+        if (current.compareTo(node.get) >= 0) {
             if (current.left != null) {
                 current.left = node;
                 return true;
@@ -102,6 +103,8 @@ public class BinarySearchTree<T extends Comparable> {
     public boolean isEmpty() {
         return size == 0;
     }
+
+ */
 
 
 }

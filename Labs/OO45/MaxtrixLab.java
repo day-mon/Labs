@@ -1,11 +1,13 @@
-package OO45;
+package Labs.OO45;
 
 import javax.swing.text.Style;
 import java.util.Scanner;
 
-public class MaxtrixLab {
+public class MaxtrixLab
+{
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 
         Scanner in = new Scanner(System.in);
 
@@ -21,31 +23,38 @@ public class MaxtrixLab {
         m2 = new double[rows][cols];
 
         System.out.println("Input your elements for matrix 1: ");
-        for (int i = 0; i < rows; i++) {
-            for (int k = 0; k < cols; k++) {
-                 m1[i][k] = in.nextDouble();
+        for (int i = 0; i < rows; i++)
+        {
+            for (int k = 0; k < cols; k++)
+            {
+                m1[i][k] = in.nextDouble();
             }
         }
 
         System.out.println("Input your elements for matrix 2: ");
-        for (int i = 0; i < rows; i++) {
-            for (int k = 0; k < cols; k++) {
+        for (int i = 0; i < rows; i++)
+        {
+            for (int k = 0; k < cols; k++)
+            {
                 m2[i][k] = in.nextDouble();
             }
         }
 
         double[][] sum = add(m1, m2);
 
-            for (int i = 0; i < rows; i++) {
-                for (int k = 0; k < cols; k++) {
-                    System.out.print(sum[i][k] + " ");
-                }
-                // will create a new space for each row.
-                System.out.println(" ");
+        for (int i = 0; i < rows; i++)
+        {
+            for (int k = 0; k < cols; k++)
+            {
+                System.out.print(sum[i][k] + " ");
             }
+            // will create a new space for each row.
+            System.out.println(" ");
+        }
     }
 
-    public static double[][] add(double m1[][], double m2[][]) {
+    public static double[][] add(double m1[][], double m2[][])
+    {
         // first road block: not adding first column and row
         // fixed: on line 31, i init m1 twice so it wouldnt add anything.
 
@@ -62,9 +71,11 @@ public class MaxtrixLab {
          *      [1][1] + [1][1]
          *   done
          */
-        for (int i = 0; i < m1.length; i++) {
+        for (int i = 0; i < m1.length; i++)
+        {
             // this will be for rows
-            for (int k = 0; k < m1[0].length; k++) {
+            for (int k = 0; k < m1[0].length; k++)
+            {
                 // this will be for cols
                 result[i][k] = m1[i][k] + m2[i][k];
             }

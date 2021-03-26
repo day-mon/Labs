@@ -2,7 +2,7 @@ package Drivers;
 import java.lang.Runtime;
 import java.lang.management.MemoryUsage;
 
-import Labs.ArrayQueue;
+import Labs.OO45.ArrayQueue;
 
 public class ArrayQueueDriver {
     public static void main(String[] args) {

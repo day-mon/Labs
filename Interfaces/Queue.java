@@ -1,3 +1,4 @@
+
 package Interfaces;
 /**
  * This is a simplified interface for Queue, based on the Java API.

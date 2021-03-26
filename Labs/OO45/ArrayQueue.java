@@ -1,8 +1,9 @@
-package OO45;
+package Labs.OO45;
 
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;
+
 import Interfaces.Queue;
 
 
@@ -13,88 +14,112 @@ import Interfaces.Queue;
  * offer(e), poll(), peek()
  */
 
-public class ArrayQueue<T> implements Queue<T> {
-    private Object [] queue;
+public class ArrayQueue<T> implements Queue<T>
+{
+    private Object[] queue;
     private int size;
     private int front;
     private int back;
     private int arrayCapacity;
     public static final int DEFAULT_CAPACITY = 25;
 
-    public ArrayQueue() {
+    public ArrayQueue()
+    {
         this(DEFAULT_CAPACITY);
     }
 
-    public ArrayQueue(int initialCapacity) {
+    public ArrayQueue(int initialCapacity)
+    {
         arrayCapacity = initialCapacity;
         queue = new Object[initialCapacity];
     }
 
 
     @Override
-    public boolean add(T obj) {
-        if (size == arrayCapacity-1) { /**Why arraaycap-1, we want to have a wall inbetween the front and the back */
-            resizeArray(arrayCapacity*2); /**Just resizes  */
+    public boolean add(T obj)
+    {
+        if (size == arrayCapacity - 1)
+        { /**Why arraaycap-1, we want to have a wall inbetween the front and the back */
+            resizeArray(arrayCapacity * 2); /**Just resizes  */
         }
         queue[back] = obj;
-        back = (back + 1)%arrayCapacity;
+        back = (back + 1) % arrayCapacity;
         size++;
         return true;
     }
 
     @Override
-    public boolean offer(T obj) {
-        try {
+    public boolean offer(T obj)
+    {
+        try
+        {
             return add(obj);
-        } catch (Exception ex) {
+        }
+        catch (Exception ex)
+        {
             return false;
         }
     }
 
     @Override
-    public T remove() {
-        if (size == 0) {
+    public T remove()
+    {
+        if (size == 0)
+        {
             throw new NoSuchElementException("Empty queue");
         }
-    
+
         T val = (T) queue[front];
         queue[front] = null;
-        front = (front + 1) % arrayCapacity; 
+        front = (front + 1) % arrayCapacity;
         size--;
         return val;
     }
 
     @Override
-    public T poll() {
-        try {
+    public T poll()
+    {
+        try
+        {
             return remove();
-        } catch (NoSuchElementException ex) {
+        }
+        catch (NoSuchElementException ex)
+        {
             return null;
         }
     }
 
     @SuppressWarnings("unchecked")
     @Override
-    public T element() {
-        if (size == 0) {
+    public T element()
+    {
+        if (size == 0)
+        {
             throw new NoSuchElementException("Empty queue");
-        } 
-        return (T)queue[front];
+        }
+        return (T) queue[front];
     }
 
     @Override
-    public T peek() {
-        try {
+    public T peek()
+    {
+        try
+        {
             return element();
-        } catch (NoSuchElementException ex) {
+        }
+        catch (NoSuchElementException ex)
+        {
             return null;
         }
     }
 
     @Override
-    public boolean contains(T obj) {
-        for (int i = front; i != back; i=(i + 1)%arrayCapacity) {
-            if(queue[i] == obj || queue[i].equals(obj)) {
+    public boolean contains(T obj)
+    {
+        for (int i = front; i != back; i = (i + 1) % arrayCapacity)
+        {
+            if (queue[i] == obj || queue[i].equals(obj))
+            {
                 return true;
             }
         }
@@ -102,30 +127,35 @@ public class ArrayQueue<T> implements Queue<T> {
     }
 
     @Override
-    public int size() {
+    public int size()
+    {
         return size;
     }
 
     @Override
-    public void clear() {
+    public void clear()
+    {
         // TODO Auto-generated method stub
         queue = new Object[DEFAULT_CAPACITY];
         size = 0;
     }
 
     @Override
-    public boolean isEmpty() {
+    public boolean isEmpty()
+    {
         return size == 0;
     }
 
-    private void resizeArray(int newCapacity) {
-        Object [] arr = new Object[newCapacity];
+    private void resizeArray(int newCapacity)
+    {
+        Object[] arr = new Object[newCapacity];
         int index = front;
         int i = 0;
-        while (index != back) {
+        while (index != back)
+        {
             arr[i] = queue[index];
             i++;
-            index = (index + 1)%arrayCapacity;
+            index = (index + 1) % arrayCapacity;
         }
         front = 0;
         back = size;
@@ -134,9 +164,11 @@ public class ArrayQueue<T> implements Queue<T> {
     }
 
     @Override
-    public Object[] toArray() {
-        Object [] arr = new Object[size];
-        for (int i = front, k =0; i != back; k++, i=(i + 1)%arrayCapacity) {
+    public Object[] toArray()
+    {
+        Object[] arr = new Object[size];
+        for (int i = front, k = 0; i != back; k++, i = (i + 1) % arrayCapacity)
+        {
             arr[k] = queue[i];
         }
         return arr;
@@ -144,8 +176,9 @@ public class ArrayQueue<T> implements Queue<T> {
 
     @SuppressWarnings("unchecked")
     @Override
-    public T[] toArray(T[] a) {
-        return (T[])Arrays.copyOf(this.toArray(), size, a.getClass());
+    public T[] toArray(T[] a)
+    {
+        return (T[]) Arrays.copyOf(this.toArray(), size, a.getClass());
     }
-    
+
 }

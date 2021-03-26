@@ -1,6 +1,7 @@
 package Drivers;
 
-import Labs.BankTransaction;
+
+import Labs.OO45.BankTransaction;
 
 public class BankTransactionDriver
 {
