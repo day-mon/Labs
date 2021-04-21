@@ -57,6 +57,13 @@ public class Point implements Serializable
         this.label = label;
     }
 
+    public double distance(Point o)
+    {
+        return Math.sqrt(
+                Math.pow(x - o.x, 2) + Math.pow(y - o.y, 2)
+        );
+    }
+
     @Override
     public boolean equals(Object o)
     {

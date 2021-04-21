@@ -32,11 +32,7 @@ public class Circle implements Serializable
 
     public boolean contains(Point p)
     {
-        double x = Math.pow(p.getX() - center.getX(), 2);
-        double y = Math.pow(p.getY() - center.getX(), 2);
-        double r = radius * radius;
-
-        return (x + y) > r;
+        return p.distance(this.center) < radius;
     }
 
 
