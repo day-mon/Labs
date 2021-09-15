@@ -1,0 +1,16 @@
+C:\Users\damon\source\repos\Baseball - Assignment\Baseball - Assignment\bin\Debug\net5.0\Baseball - Assignment.exe
+C:\Users\damon\source\repos\Baseball - Assignment\Baseball - Assignment\bin\Debug\net5.0\Baseball - Assignment.deps.json
+C:\Users\damon\source\repos\Baseball - Assignment\Baseball - Assignment\bin\Debug\net5.0\Baseball - Assignment.runtimeconfig.json
+C:\Users\damon\source\repos\Baseball - Assignment\Baseball - Assignment\bin\Debug\net5.0\Baseball - Assignment.runtimeconfig.dev.json
+C:\Users\damon\source\repos\Baseball - Assignment\Baseball - Assignment\bin\Debug\net5.0\Baseball - Assignment.dll
+C:\Users\damon\source\repos\Baseball - Assignment\Baseball - Assignment\bin\Debug\net5.0\ref\Baseball - Assignment.dll
+C:\Users\damon\source\repos\Baseball - Assignment\Baseball - Assignment\bin\Debug\net5.0\Baseball - Assignment.pdb
+C:\Users\damon\source\repos\Baseball - Assignment\Baseball - Assignment\obj\Debug\net5.0\Baseball - Assignment.csproj.AssemblyReference.cache
+C:\Users\damon\source\repos\Baseball - Assignment\Baseball - Assignment\obj\Debug\net5.0\Baseball - Assignment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\damon\source\repos\Baseball - Assignment\Baseball - Assignment\obj\Debug\net5.0\Baseball - Assignment.AssemblyInfoInputs.cache
+C:\Users\damon\source\repos\Baseball - Assignment\Baseball - Assignment\obj\Debug\net5.0\Baseball - Assignment.AssemblyInfo.cs
+C:\Users\damon\source\repos\Baseball - Assignment\Baseball - Assignment\obj\Debug\net5.0\Baseball - Assignment.csproj.CoreCompileInputs.cache
+C:\Users\damon\source\repos\Baseball - Assignment\Baseball - Assignment\obj\Debug\net5.0\Baseball - Assignment.dll
+C:\Users\damon\source\repos\Baseball - Assignment\Baseball - Assignment\obj\Debug\net5.0\ref\Baseball - Assignment.dll
+C:\Users\damon\source\repos\Baseball - Assignment\Baseball - Assignment\obj\Debug\net5.0\Baseball - Assignment.pdb
+C:\Users\damon\source\repos\Baseball - Assignment\Baseball - Assignment\obj\Debug\net5.0\Baseball - Assignment.genruntimeconfig.cache

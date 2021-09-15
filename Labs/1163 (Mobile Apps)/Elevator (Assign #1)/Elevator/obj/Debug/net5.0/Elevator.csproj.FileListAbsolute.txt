@@ -1,0 +1,16 @@
+C:\Users\damon\source\repos\Elevator\Elevator\bin\Debug\net5.0\Elevator.exe
+C:\Users\damon\source\repos\Elevator\Elevator\bin\Debug\net5.0\Elevator.deps.json
+C:\Users\damon\source\repos\Elevator\Elevator\bin\Debug\net5.0\Elevator.runtimeconfig.json
+C:\Users\damon\source\repos\Elevator\Elevator\bin\Debug\net5.0\Elevator.runtimeconfig.dev.json
+C:\Users\damon\source\repos\Elevator\Elevator\bin\Debug\net5.0\Elevator.dll
+C:\Users\damon\source\repos\Elevator\Elevator\bin\Debug\net5.0\ref\Elevator.dll
+C:\Users\damon\source\repos\Elevator\Elevator\bin\Debug\net5.0\Elevator.pdb
+C:\Users\damon\source\repos\Elevator\Elevator\obj\Debug\net5.0\Elevator.csproj.AssemblyReference.cache
+C:\Users\damon\source\repos\Elevator\Elevator\obj\Debug\net5.0\Elevator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\damon\source\repos\Elevator\Elevator\obj\Debug\net5.0\Elevator.AssemblyInfoInputs.cache
+C:\Users\damon\source\repos\Elevator\Elevator\obj\Debug\net5.0\Elevator.AssemblyInfo.cs
+C:\Users\damon\source\repos\Elevator\Elevator\obj\Debug\net5.0\Elevator.csproj.CoreCompileInputs.cache
+C:\Users\damon\source\repos\Elevator\Elevator\obj\Debug\net5.0\Elevator.dll
+C:\Users\damon\source\repos\Elevator\Elevator\obj\Debug\net5.0\ref\Elevator.dll
+C:\Users\damon\source\repos\Elevator\Elevator\obj\Debug\net5.0\Elevator.pdb
+C:\Users\damon\source\repos\Elevator\Elevator\obj\Debug\net5.0\Elevator.genruntimeconfig.cache
