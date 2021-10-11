@@ -17,7 +17,7 @@ import java.util.NoSuchElementException;
  * collection? - What is the runtime complexity of the methods?
  *
  * @author Stephen J. Sarma-Weierman
- * @author Casey Morar
+ * @author Damon Montague
  */
 public class HashDictionary<K, V> implements Dictionary<K, V>
 {
