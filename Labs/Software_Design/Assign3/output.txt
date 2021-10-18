@@ -1,0 +1,19 @@
+s - here has appeared 6208 times
+s - love has appeared 582 times
+s - be has appeared 15380 times
+s - fish has appeared 73 times
+s - said has appeared 3913 times
+s - fortnite has appeared 0 times
+s - open has appeared 293 times
+s - wine has appeared 288 times
+
+=================================================
+
+m - here has appeared 6208 times
+m - love has appeared 582 times
+m - be has appeared 15380 times
+m - fish has appeared 73 times
+m - said has appeared 3913 times
+m - fortnite has appeared 0 times
+m - open has appeared 293 times
+m - wine has appeared 288 times
