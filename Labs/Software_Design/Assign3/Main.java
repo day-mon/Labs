@@ -30,7 +30,7 @@ public class Main
 
             var size = list.size();
 
-            var runnables = new ArrayList<Runnable>();
+            var runnable = new ArrayList<Runnable>();
 
 
             for (var c = 1; c < size; c++)
@@ -43,11 +43,11 @@ public class Main
                   else
                   {
                         var word = list.get(c);
-                        runnables.add(() -> findWord(mode, word));
+                        runnable.add(() -> findWord(mode, word));
                   }
 
             }
-            runnables.forEach(Runnable::run);
+            runnable.forEach(Runnable::run);
 
             assignObjs.forEach(System.out::println);
             var totalTime = assignObjs.stream()
