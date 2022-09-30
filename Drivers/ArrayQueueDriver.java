@@ -1,8 +1,7 @@
 package Drivers;
 import java.lang.Runtime;
-import java.lang.management.MemoryUsage;
 
-import Labs.OO45.ArrayQueue;
+import Labs.CS_0045_DSAINFO.ArrayQueue;
 
 public class ArrayQueueDriver {
     public static void main(String[] args) {

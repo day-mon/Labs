@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="803.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.daymon.github.assign4.Assign2DrawController">
+   <top>
+       <GridPane BorderPane.alignment="CENTER">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+           <TextField fx:id="forthField" prefHeight="25.0" prefWidth="130.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+           <TextField fx:id="thirdField" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+           <Label text="Choose Shape..." />
+           <Label text="Choose Shading/Color" GridPane.rowIndex="3" />
+           <Label text="Second Y Point" GridPane.columnIndex="3" GridPane.rowIndex="1" fx:id="fourthLabel" />
+           <Label text="Second X Point" GridPane.columnIndex="2" GridPane.rowIndex="1" fx:id="thirdLabel" />
+           <Label text="First Y Point" GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="secondLabel"/>
+           <Label text="First X Point" GridPane.rowIndex="1" fx:id="firstLabel" />
+           <TextField fx:id="secondField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+           <TextField fx:id="firstField" GridPane.rowIndex="2" />
+           <RadioButton fx:id="rectangleRadio" mnemonicParsing="false" onAction="#onRadioChanged" text="Rectangle" GridPane.columnIndex="3">
+              <toggleGroup>
+                  <ToggleGroup fx:id="radioButton" />
+              </toggleGroup>
+           </RadioButton>
+           <RadioButton fx:id="circleRadio" mnemonicParsing="false" onAction="#onRadioChanged" text="Circle" toggleGroup="$radioButton" GridPane.columnIndex="2" />
+           <RadioButton fx:id="lineRadio" selected="true" mnemonicParsing="false" onAction="#onRadioChanged" text="Line" toggleGroup="$radioButton" GridPane.columnIndex="1" />
+           <ComboBox fx:id="comboBox" prefWidth="150.0" promptText="Select a option" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+           <ColorPicker fx:id="colorPicker" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+           <Button mnemonicParsing="false" onAction="#onDrawPressed" prefHeight="25.0" prefWidth="161.0" text="Draw" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+       </GridPane>
+   </top>
+   <bottom>
+      <Pane fx:id="display" prefHeight="662.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

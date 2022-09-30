@@ -1,6 +1,6 @@
 package Drivers;
 
-import Labs.OO48.BinaryTree;
+import Labs.CS_0048_DSAF.BinaryTree;
 
 public class BinaryTreeDriver
 {

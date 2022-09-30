@@ -1,0 +1,31 @@
+Starting Test.....
+Unsorted Volume1 { barrels = 114 | gallons = 37 }
+Unsorted Volume1 { barrels = 56 | gallons = 41 }
+Unsorted Volume1 { barrels = 171 | gallons = 36 }
+Unsorted Volume1 { barrels = 57 | gallons = 38 }
+Unsorted Volume1 { barrels = 172 | gallons = 33 }
+Unsorted Volume1 { barrels = 56 | gallons = 41 }
+Unsorted Volume1 { barrels = 113 | gallons = 40 }
+Unsorted Volume1 { barrels = 0 | gallons = 0 }
+Unsorted Volume2 { pints = 6 } Volume1 { barrels = 57 | gallons = 38 }
+Unsorted Volume2 { pints = 7 } Volume1 { barrels = 56 | gallons = 41 }
+Unsorted Volume2 { pints = 7 } Volume1 { barrels = 0 | gallons = 38 }
+Unsorted Volume2 { pints = 5 } Volume1 { barrels = 114 | gallons = 38 }
+Sorted Volume1 { barrels = 0 | gallons = 0 }
+Sorted Volume2 { pints = 7 } Volume1 { barrels = 0 | gallons = 38 }
+Sorted Volume1 { barrels = 56 | gallons = 41 }
+Sorted Volume1 { barrels = 56 | gallons = 41 }
+Sorted Volume2 { pints = 7 } Volume1 { barrels = 56 | gallons = 41 }
+Sorted Volume1 { barrels = 57 | gallons = 38 }
+Sorted Volume2 { pints = 6 } Volume1 { barrels = 57 | gallons = 38 }
+Sorted Volume1 { barrels = 113 | gallons = 40 }
+Sorted Volume1 { barrels = 114 | gallons = 37 }
+Sorted Volume2 { pints = 5 } Volume1 { barrels = 114 | gallons = 38 }
+Sorted Volume1 { barrels = 171 | gallons = 36 }
+Sorted Volume1 { barrels = 172 | gallons = 33 }
+
+Other Test
+b.compareTo(x) == -1
+x.compareTo(b) == 1
+Print a in pints == 38600
+Print w in pints == 19462

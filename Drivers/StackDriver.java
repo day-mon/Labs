@@ -2,7 +2,7 @@ package Drivers;
 
 import java.util.EmptyStackException;
 
-import Labs.OO45.VectorStack;
+import Labs.CS_0045_DSAINFO.VectorStack;
 
 /**
  * Driver class for testing ArrayStack.

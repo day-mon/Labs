@@ -1,7 +1,7 @@
 package Drivers;
 
 import Interfaces.Dictionary;
-import Labs.OO48.HashDictionary;
+import Labs.CS_0048_DSAF.HashDictionary;
 
 import java.util.Iterator;
 

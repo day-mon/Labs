@@ -2,7 +2,7 @@ package Drivers;
 
 // import java.util.Arrays; // Totally unnecessary line again
 import Interfaces.Set;
-import Labs.OO45.LinkedSet;
+import Labs.CS_0045_DSAINFO.LinkedSet;
 
 /**
  * Driver method for testing the ArraySet data structure.

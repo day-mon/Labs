@@ -1,7 +1,7 @@
 package Drivers;
 
 
-import Labs.OO45.AutoSorter;
+import Labs.CS_0045_DSAINFO.AutoSorter;
 
 public class AutoSorterDriver {
     public static void main(String[] args) {

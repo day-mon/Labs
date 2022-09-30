@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TipCalculatorV1.MainPage">
+    <StackLayout Orientation="Vertical"
+                 BackgroundColor="DarkGray">
+        <StackLayout Orientation="Horizontal">
+            <Entry x:Name="DinnerTotal" Placeholder="Dinner Bill" Keyboard="Numeric" WidthRequest="120"></Entry>
+            <Label Text="Dinner Total" FontSize="Medium" VerticalTextAlignment="Center"></Label>
+            <Button x:Name="TenPercent" Text="10%" Clicked="TenPercent_Clicked" HorizontalOptions="EndAndExpand" BackgroundColor="DarkGray" TextColor="Red"></Button>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Entry x:Name="TipTotal" Placeholder="Tip Total" IsReadOnly="True" WidthRequest="120"></Entry>
+            <Label Text="Tip Total" FontSize="Medium" VerticalTextAlignment="Center"></Label>
+            <Button x:Name="FifteenPercent" Text="15%" Clicked="FifteenPercent_Clicked" HorizontalOptions="EndAndExpand" BackgroundColor="DarkGray" TextColor="Red"></Button>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Entry x:Name="FinalTotal" Placeholder="Order + Tip" IsReadOnly="True" WidthRequest="120"></Entry>
+            <Label Text="Order Total" FontSize="Medium" VerticalTextAlignment="Center"></Label>
+            <Button x:Name="TwentyPercent" Text="20%" Clicked="TwentyPercet_Clicked" HorizontalOptions="EndAndExpand" BackgroundColor="DarkGray" TextColor="Red"></Button>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
+
+    
+    
+    
