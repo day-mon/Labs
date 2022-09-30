@@ -1,10 +1,6 @@
-package objects;
-
-import Labs.CS_1738_AI.AStar.objects.Node;
-import Labs.CS_1738_AI.AStar.objects.ObstacleType;
+package Labs.CS_1783_AI.AStar.objects;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 

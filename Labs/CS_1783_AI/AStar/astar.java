@@ -1,13 +1,11 @@
-package Labs.CS_1738_AI.AStar;
+package Labs.CS_1783_AI.AStar;
 
+import Labs.CS_1783_AI.AStar.util.FileUtils;
 import objects.Node;
 import objects.ObstacleType;
 import util.*;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class astar
@@ -22,8 +20,8 @@ public class astar
 
 
         fileMap.forEach((mapFile, barberFile) -> {
-            var map = util.FileUtils.parseSimulationFormat(new File("data/%s".formatted(mapFile)));
-            var barberMap = util.FileUtils.parseBarberFormat(new File("data/%s".formatted(barberFile)));
+            var map = FileUtils.parseSimulationFormat(new File("data/%s".formatted(mapFile)));
+            var barberMap = FileUtils.parseBarberFormat(new File("data/%s".formatted(barberFile)));
             map.setBarberMap(barberMap);
 
 

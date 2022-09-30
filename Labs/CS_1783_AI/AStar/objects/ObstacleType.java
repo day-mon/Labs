@@ -1,4 +1,4 @@
-package Labs.CS_1738_AI.AStar.objects;
+package Labs.CS_1783_AI.AStar.objects;
 
 public enum ObstacleType {
     // '\u200E'
