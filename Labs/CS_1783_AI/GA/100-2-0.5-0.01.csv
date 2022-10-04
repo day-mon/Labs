@@ -1,0 +1,9 @@
+Generation,Minimum,Average,Maximum
+Population Size = 100,Method = 2, Crossover Probability = 0.5,Mutation Probability = 0.01
+1,5,9.89,15
+2,7,11.05,15
+3,9,12.24,16
+4,7,13.20,18
+5,10,14.44,19
+6,10,15.67,19
+7,13,16.90,20
