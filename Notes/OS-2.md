@@ -212,19 +212,35 @@ int StoreConditional(int *ptr, int value) {
 - **Spin Lock with LL and SC**
 
 ```c
+int StoreConditional(int *ptr, int value) {
+
+    if (/* no other thread has changed the value of ptr */) 
+    {
+        *ptr = value;
+        return 1;
+    } 
+    else 
+    {
+        return 0;
+    }
+}
+
+int LoadLinked(int *ptr) {
+    return *ptr;
+}
+
 void lock(lock_t *lock)
 {
+  // 1 == locked
+  // 0 == unlocked
   while (1) 
   {
-    // tries to acquire the lock
-    while (LoadLinked(&lock->flag) == 1);
-  
-    // will try the store conditional and if its successful then it will break out of the loop
-    // if the store conditional fails then it will try to acquire the lock again
-    // this could fail if another thread has changed the value of the flag
-    if (StoreConditional(&lock->flag, 1) == 1) {
-      break;
-    }
+        // is trying to check to see if the lock is free or not but this can be interrupted
+        while (LoadLinked(&lock->flag) == 1);
+      
+        // if no other thread has changed the value of lock->flag then the lock is acquired
+        if (StoreConditional(&lock->flag, 1) == 1)
+              break;
   }
 }
 
@@ -233,7 +249,10 @@ void unlock(lock_t *lock) {
 }
 
 void lock(lock_t *lock) {
-  while (LoadLinked(&lock->flag) == 1 || StoreConditional(&lock->flag, 1) == 0);
+  while (LoadLinked(&lock->flag) == 1 || !StoreConditional(&lock->flag, 1) == 0);
   // spin until the lock is acquired
+  // uses short circut
 }
+
+
 ```
