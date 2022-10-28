@@ -235,24 +235,47 @@ void lock(lock_t *lock)
   // 0 == unlocked
   while (1) 
   {
-        // is trying to check to see if the lock is free or not but this can be interrupted
+        // will spin until the lock is acquired
         while (LoadLinked(&lock->flag) == 1);
       
-        // if no other thread has changed the value of lock->flag then the lock is acquired
-        if (StoreConditional(&lock->flag, 1) == 1)
-              break;
+        // will try to acquire the lock but it could fail if another thread has changed the value of the lock
+        // if the lock is acquired it will break out because the acquired
+        if (StoreConditional(&lock->flag, 1) == 1) break;
   }
 }
+
 
 void unlock(lock_t *lock) {
   lock->flag = 0;
 }
 
-void lock(lock_t *lock) {
+void lock_ss(lock_t *lock) {
   while (LoadLinked(&lock->flag) == 1 || !StoreConditional(&lock->flag, 1) == 0);
   // spin until the lock is acquired
   // uses short circut
 }
 
+void thread_main(void *id) {
+    int *p_data = (int *)id;
+    for (int i = 0; i < NUM_ITERATIONS; i++) {
+        lock(&lock);
+        *p_data += 1;
+        unlock(&lock);
+    }
+    return NULL;
+}
+```
+
+int main() {
+    pthread_t thread1, thread2;
+    CHECK(pthread_create(&thread1, NULL, thread_main, &data));
+    CHECK(pthread_create(&thread2, NULL, thread_main, &data));
+  
+    CHECK(pthread_join(thread1, NULL));
+    CHECK(pthread_join(thread2, NULL));
+  
+    printf("data = %d\n", data);
+    return 0;
+}
 
 ```
