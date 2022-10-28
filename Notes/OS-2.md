@@ -264,7 +264,6 @@ void thread_main(void *id) {
     }
     return NULL;
 }
-```
 
 int main() {
     pthread_t thread1, thread2;
