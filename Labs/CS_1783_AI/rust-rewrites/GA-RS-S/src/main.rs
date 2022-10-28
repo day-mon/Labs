@@ -1,61 +1,61 @@
-use rand::{Rng, thread_rng};
 
-const GENE_COUNT: usize = 100;
+const GENE_COUNT: usize = 8000;
 
 fn main() {
-    let n = 100;
+    let n = 1000;
     let pc = 0.5;
     let pm = 0.05;
 
 
+    let start = std::time::Instant::now();
     let mut population = init_population(n);
     let mut new_population: Vec<Vec<u32>> = Vec::new();
-    let mut random = thread_rng();
     let mut generation = 1;
-
-    let start = std::time::Instant::now();
 
     while get_best_fitness(&population) != GENE_COUNT as usize
     {
-        for _ in 0 .. n / 2
+        for _ in 0..n / 2
         {
-            let parents = select_parents(&population);
-            let mut parent_one = parents.0;
-            let mut parent_two = parents.1;
+            let mut parent_one = select_parents(&population);
+            let mut parent_two = select_parents(&population);
 
-            if random.gen_range(0.00..1.00) < pc {
+            let mut random = rand::random::<f64>();
+            if random < pc {
                 let children = crossover(&parent_one, &parent_two);
                 parent_one = children.0;
                 parent_two = children.1;
             }
 
-            if random.gen_range(0.00..1.00) < pm {
+            random = rand::random::<f64>();
+            if random < pm {
                 mutate(&mut parent_one);
             }
 
 
-            if random.gen_range(0.00..1.00) < pm {
+            random = rand::random::<f64>();
+            if random < pm {
                 mutate(&mut parent_two);
             }
 
             new_population.push(parent_one);
             new_population.push(parent_two);
         }
-        // if generation % 10 == 0 {
-        //     println!("Generation {} | Highest Fitness {}", generation, get_best_fitness(&population))
-        // }
+
+        if generation % 10 == 0 {
+            println!("Generation {} | Highest Fitness {}", generation, get_best_fitness(&population))
+        }
         population.clear();
         population.append(&mut new_population);
         generation += 1;
     }
-   // print how long it took
-    println!("Time elapsed: {}ms | Highest Fitness {}", start.elapsed().as_millis(), get_best_fitness(&population));
-}
+    // print how long it took
+    let elapsed = start.elapsed();
+    println!("generation: {}", generation);
+    println!("\nTime to reach desired fitness: {:?}, Avg time per generation {:?}", elapsed, (elapsed / generation));}
 
 fn mutate(chromosome: &mut Vec<u32>) -> &Vec<u32>
 {
-    let mut random = thread_rng();
-    let index = random.gen_range(0..GENE_COUNT);
+    let index = rand::random::<usize>() % GENE_COUNT;
     let value = chromosome[index];
     chromosome[index] = if value == 0 { 1 } else { 0 };
     return chromosome;
@@ -64,8 +64,7 @@ fn mutate(chromosome: &mut Vec<u32>) -> &Vec<u32>
 
 
 fn crossover(parent_one: &Vec<u32>, parent_two: &Vec<u32>) -> (Vec<u32>, Vec<u32>) {
-    let mut random = thread_rng();
-    let crossover_point = random.gen_range(0..GENE_COUNT - 1) as usize;
+    let crossover_point = rand::random::<usize>() % GENE_COUNT;
 
     let mut child_one_one = parent_one[0..crossover_point].to_vec();
     let mut child_one_two = parent_one[crossover_point..=GENE_COUNT -1].to_vec();
@@ -81,63 +80,59 @@ fn crossover(parent_one: &Vec<u32>, parent_two: &Vec<u32>) -> (Vec<u32>, Vec<u32
 
 }
 
-fn select_parents(population: &Vec<Vec<u32>>) -> (Vec<u32>, Vec<u32>) {
-    // we are going to do tournment selection here
-    let parent_pool_size = 2;
-    let mut parent_pool: Vec<(Vec<u32>, Vec<u32>)> = Vec::with_capacity(parent_pool_size);
-    let mut rand = rand::thread_rng();
-
-
-    for _ in 0..parent_pool_size
+fn select_parents(population: &Vec<Vec<u32>>) -> Vec<u32>
+{
+    let mut tournament = Vec::new();
+    for _ in 0..5
     {
-        let mut parent_pool_sub: Vec<Vec<u32>> = Vec::with_capacity(2);
-        while parent_pool_sub.len() != 2
+        let index = rand::random::<usize>() % population.len();
+        tournament.push(population[index].clone());
+    }
+
+    let mut best = tournament[0].clone();
+    for i in 0..tournament.len()
+    {
+        if measure_fitness(&tournament[i]) > measure_fitness(&best)
         {
-            let parent_one = population[rand.gen_range(0..population.len())].clone();
-            let parent_two = population[rand.gen_range(0..population.len())].clone();
-            let better_parent = if measure_fitness(&parent_two) > measure_fitness(&parent_one) {
-                parent_two
-            } else {
-                parent_one
-            };
-            parent_pool_sub.push(better_parent);
-        }
-        parent_pool.push((parent_pool_sub[0].clone(), parent_pool_sub[1].clone()))
-
-    }
-
-    let mut best = parent_pool[0].clone();
-    for parents in parent_pool {
-        if measure_fitness(&parents.1) > measure_fitness(&best.1)
-            &&  measure_fitness(&parents.0) > measure_fitness(&best.1) {
-            best = parents
+            best = tournament[i].clone();
         }
     }
 
-    return best;
-
-
+    best
 }
 
+
 fn get_best_fitness(population: &Vec<Vec<u32>>) -> usize {
-     population.iter().map(|c| measure_fitness(c)).max().unwrap()
+    let mut best = 0;
+    for i in 0..population.len()
+    {
+        let fitness = measure_fitness(&population[i]);
+        if fitness > best
+        {
+            best = fitness;
+        }
+    }
+    best
 }
 
 fn measure_fitness(chromosome: &Vec<u32>) -> usize {
-    chromosome.iter().filter(|&n| *n == 1).count()
+    let mut fitness = 0;
+    for i in 0..GENE_COUNT {
+        fitness += chromosome[i] as usize;
+    }
+    return fitness;
 }
 
 fn init_population(n: u32) -> Vec<Vec<u32>> {
 
     let mut population:Vec<Vec<u32>> = Vec::new();
-    let mut rand = thread_rng();
     for _ in 0..n
     {
         let mut chromosome: Vec<u32> = Vec::with_capacity(GENE_COUNT as usize);
         for _ in 0..GENE_COUNT
         {
-            let num = rand.gen_range(0..2);
-            chromosome.push(num);
+            let num = rand::random::<usize>() % 2;
+            chromosome.push(num as u32);
         }
         population.push(chromosome)
     }

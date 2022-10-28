@@ -1,5 +1,5 @@
 [package]
-name = "GA-RS-S"
+name = "ga_rs_s"
 version = "0.1.0"
 edition = "2021"
 
