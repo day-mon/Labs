@@ -276,5 +276,4 @@ int main() {
     printf("data = %d\n", data);
     return 0;
 }
-
 ```
