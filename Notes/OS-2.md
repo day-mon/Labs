@@ -235,11 +235,12 @@ void lock(lock_t *lock)
   // 0 == unlocked
   while (1) 
   {
-        // will spin until the lock is acquired
+        // will spin until the lock is unlocked
         while (LoadLinked(&lock->flag) == 1);
       
-        // will try to acquire the lock but it could fail if another thread has changed the value of the lock
-        // if the lock is acquired it will break out because the acquired
+        // will try to acquire the lock but it could fail due to a number for reasons.
+        // 1. a system interupt happens
+        // 2. another thread has changed the value of the lock      
         if (StoreConditional(&lock->flag, 1) == 1) break;
   }
 }
@@ -277,3 +278,55 @@ int main() {
     return 0;
 }
 ```
+***
+Date: **November 2nd, 2022**
+
+**Lock with Queues**
+```c
+type def struct __lock_t {
+    // the 
+    int flag;
+    // the guard is for 
+    int guard;
+    // the queue is used for threads that are waiting to acquire the lock
+    queue_t queue
+} lock_t;
+
+void lock_init(lock_t *m) {
+    m->flag = 0;
+    m->tail = 0;
+    queue_init(&m->q);
+}
+
+// uses active and passive waiting
+// have to get the guard first to do anything
+// the guard is used to make sure that only one thread is in the critical section at a time
+void lock(lock_t *m) {
+    // acquired guard by spinning
+    while (TestandSet(&m->guard, 1) == 1);
+    
+    if (m->flag == 0) {
+        m->flag = 1;
+        m->guard = 0;
+    } else {
+        // gettid is a thread id
+        queue_enqueue(&m->q, gettid());
+        m->guard = 0;
+        
+        // gives up the time slice
+        park();
+    }
+}
+
+void unlock(lock_t *m) {
+    while (TestandSet(&m->guard, 1) == 1);
+    
+    if (queue_empty(&m->q)) {
+        m->flag = 0; // if the queue is empty then the lock is unlocked
+    } else {
+      unpark(queue_dequeue(&m->q));
+    }
+    m->guard = 0;
+}
+```
+- 5 >> 2 = 20

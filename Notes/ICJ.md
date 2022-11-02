@@ -175,3 +175,57 @@
   - Not guilty
   - No contest
 - 93% of all criminal cases are resolved through plea bargaining
+
+***
+
+#### November 1, 2022
+
+## The Judge
+- Judge is the person who presides over the trial
+- An elected official or appointed by the governor
+- The trial judge has primary duty of ensuring that the trial is conducted fairly and in accordance with the law
+
+## The Prosecuting Attorney
+- An attorney who is responsible for presenting the state's case
+- Prosecuting attorney is an elected official or appointed by the governor
+- Considered the chief law enforcement officer in the county
+  - Have the burden of proving the defendant's guilt beyond a reasonable doubt
+
+## The Prosecutor
+- Discretionary power to decide whether to file charges, where to plea bargain, and what sentence to seek
+- Decision regarding how to proceed is based on the prosecutor's assessment based on a number of factors
+  - Quality of the evidence
+  - Seriousness of the crime
+  - Likelihood of conviction
+  - Court Resources
+  - Public opinion
+  - Wishes of the victim or family members
+- Legal and ethical concerns
+- **6th Amendment right to counsel**
+- Communicating with the defendant without attorney present
+- **5th Amendment right against self-incrimination**
+- Failing to disclose evidence in discovery
+- Exculpatory evidence: Favorable evidence that is not disclosed to the defense
+  - Ignoring conflicts of interest
+  - Allowing false witnesses to testify
+- Discovery: process by which the defense leans about evidence that the prosecution intends to use at trial
+
+## The Defense Counsel
+- An attorney who represents the accused before the court and ensures the defendant's civil rights are not violated
+- Often misunderstood and the public commonly notes their job is to put criminals on the street
+- Three main categories of defense attorneys
+  - Public defenders
+    - Public defenders are attorneys who are employed by the state or county to represent indigent defendants
+    - Public defenders are often overworked and underpaid
+    - Huge caseloads create pressure to plea bargain
+    - Critics are concerned that they are government employees and may be more concerned with the state's interest than the defendant's interest
+  - Private attorneys
+    - Private attorneys are often hired by the defendant
+    - Either have their own practice or work for law firms where they are partners or employees
+    - Very expensive
+    - Few law students choose to become criminal defense attorneys
+  - Court-appointed attorneys
+    - The Supreme Court has established that the defendants who cannot pay for the attorneys must recieve an adequate represnetation in all stages of processing
+    - Types of indignet defense
+      - Court-appointed attorneys
+      - Public defenders
