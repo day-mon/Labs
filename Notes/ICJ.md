@@ -225,7 +225,36 @@
     - Very expensive
     - Few law students choose to become criminal defense attorneys
   - Court-appointed attorneys
-    - The Supreme Court has established that the defendants who cannot pay for the attorneys must recieve an adequate represnetation in all stages of processing
+    - The Supreme Court has established that the defendants who cannot pay for the attorneys must receive an adequate representation in all stages of processing
     - Types of indignet defense
       - Court-appointed attorneys
       - Public defenders
+## People of the court
+  - The Bailiff
+    - Bailiff is the person who maintains order in the courtroom
+    - Bailiff is responsible for ensuring that the courtroom is orderly and that the judge is not disturbed
+    - In federal court, the bailiff is called the marshal
+  - Trial Court Administrators
+    - Responsible for facilitation the smooth functioning of courts in particular judicial districts or areas
+    - Provide uniform court management
+    - Relieve judge of routine and repetitive task
+    - Increasingly involved in juror management
+  - The Court Reporter
+    - Called a stenographer
+    - Frequent uses computer-aided transcription (CAT) to record the proceedings
+    - The official trail record may be transcribed in manuscript form and will become the basis for any appellate review
+  - The Clerk court
+    - Clerk of the court is responsible for maintaining the court's records
+    - Prepares the Jury Pool, subpoenas witnesses, and maintains the court's records
+  - Expert Witness
+    - Expert witness is a person who has special knowledge or skill that is relevant to the case
+    - Expert witness is called to testify about the facts of the case
+  - Lay Witness
+    - Lay witness is a person who has personal knowledge of the facts of the case
+    - Lay witness is called to testify about the facts of the case
+  - Jurors
+    - Jury is a group of citizens who hear the evidence and decide the facts of the case
+    - Jury is a tool for the defense to determine whether to file a motion for a new trial
+    - Jury is a tool for the prosecution to determine whether to file a motion for a new trial
+      - Minimum qualifications for jury service vary by jurisdiction
+    

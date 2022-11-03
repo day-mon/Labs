@@ -29,7 +29,7 @@ for m in range(0, M):
 
 # 2D Discrete Fourier Transform
 
-- The 2D DFT is seperable, which can be seen in this formula:
+- The 2D DFT is separable, which can be seen in this formula:
   - $F(u, v) = \sum_{x=0}^{M-1} \sum_{y=0}^{N-1} f(x, y) e^{-j2\pi \frac{ux}{M}} e^{-j2\pi \frac{vy}{N}}$
 - Classical 1D FFt has runtime of O(N log N) for image sizes that are powers of two, which means forming 2D DFT can be very efficient
 
@@ -45,11 +45,11 @@ img = img.astype(np.float32) / 255.0
 ## Chapter 3 Segmentation Thresholding and Otsu's Method
 
 ### Otsu's Method - Automatic Thresholding Estimation
-- Assuses that the foreground and background are clearly seperated in historgram as two seperate mods (hills)
+- Assumes that the foreground and background are clearly seperated in histogram as two separate mods (hills)
 - The threshold is the point where the two hills meet
 
 ## Otsus Method - Code (1/3)
-- Efficient evaluation for all values u is based ona  historgram
+- Efficient evaluation for all values u is based ona  histogram
 - Equation: $w_0(u) = \sum_{i=0}^{u} p(i)$
 ```python
 # histogram + integral
@@ -64,15 +64,15 @@ for m in range(0, M):
 ```
 
 ## Edge-based segmentation
-- Geeral idea of edge-based segmentation:
+- General idea of edge-based segmentation:
 1. Find edges
 2. Close Edges
 3. Fill holes
 
 ## Canny Edge Detector - Smoothing
-- Classical robust algorithim to find edges, which is named after John F. Canny
+- Classical robust algorithm to find edges, which is named after John F. Canny
 1. Noise Removal
-   1. Classical version uses guassian filter and certain σ
+   1. Classical version uses gaussian filter and certain σ
    2. The equation: $G(x, y) = \frac{1}{2\pi\sigma^2} e^{-\frac{x^2 + y^2}{2\sigma^2}}$
    3. Based on the σ, ≈ kernel size and integer values
 2. Gradient Estimation: Edge magnitude and direction
@@ -82,9 +82,8 @@ for m in range(0, M):
        2. $0 = \tan^{-1}(\frac{Gy}{Gx})$
     3. Round direction to 0, 45, 90, 135 degrees
 3. Non-maximum Suppression
-   1. Remember: Gradient points in syeepest uphill direction
-   2. \begin{matrix} 11 & 12 & 13 \\ 21 & 22 & 23 \\ 31 & 32 & 33 \end{matrix}
-   3. keep in mind: edge itself is orthogonal to griadnet 
+   1. Remember: Gradient points in steepest uphill direction
+   2. keep in mind: edge itself is orthogonal to gradient 
 4. Two thresholds
 5. Edge Tracking by Hysteresis
 
