@@ -62,6 +62,10 @@ for m in range(0, M):
         h[img[m, n]] += 1
         integral_total += u
 ```
+ω σ
+⊂
+≝
+
 
 ## Edge-based segmentation
 - General idea of edge-based segmentation:

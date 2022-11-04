@@ -257,4 +257,5 @@
     - Jury is a tool for the defense to determine whether to file a motion for a new trial
     - Jury is a tool for the prosecution to determine whether to file a motion for a new trial
       - Minimum qualifications for jury service vary by jurisdiction
+
     

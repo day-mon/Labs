@@ -81,12 +81,17 @@ public class AutoSorter<T extends Comparable<? super T>>
         return size;
     }
 
+
     public void clear()
     {
         store = new VectorStack<>();
         size = 0;
     }
 
+    /**
+     * Returns an array containing all of the elements in this collection in ascending order.
+     * @return an array containing all of the elements in this collection in ascending order.
+     */
     public Object[] toArray()
     {
         Object[] arr = new Object[size];

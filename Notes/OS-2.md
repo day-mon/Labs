@@ -61,7 +61,7 @@ int main() {
 - The solution is to use a mutex
 - A mutex is a lock that can be locked and unlocked
 - A mutex can be used to make a function atomic
-- A (void * ) only cares about the address not the type
+- A (void *m) only cares about the address not the type
 
 ```c
 #include <pthread.h>
@@ -237,10 +237,10 @@ void lock(lock_t *lock)
   {
         // will spin until the lock is unlocked
         while (LoadLinked(&lock->flag) == 1);
-      
+  
         // will try to acquire the lock but it could fail due to a number for reasons.
         // 1. a system interupt happens
-        // 2. another thread has changed the value of the lock      
+        // 2. another thread has changed the value of the lock  
         if (StoreConditional(&lock->flag, 1) == 1) break;
   }
 }
@@ -278,10 +278,13 @@ int main() {
     return 0;
 }
 ```
-***
+
+---
+
 Date: **November 2nd, 2022**
 
 **Lock with Queues**
+
 ```c
 type def struct __lock_t {
     // the 
@@ -304,7 +307,7 @@ void lock_init(lock_t *m) {
 void lock(lock_t *m) {
     // acquired guard by spinning
     while (TestandSet(&m->guard, 1) == 1);
-    
+  
     if (m->flag == 0) {
         m->flag = 1;
         m->guard = 0;
@@ -312,7 +315,7 @@ void lock(lock_t *m) {
         // gettid is a thread id
         queue_enqueue(&m->q, gettid());
         m->guard = 0;
-        
+  
         // gives up the time slice
         park();
     }
@@ -320,7 +323,7 @@ void lock(lock_t *m) {
 
 void unlock(lock_t *m) {
     while (TestandSet(&m->guard, 1) == 1);
-    
+  
     if (queue_empty(&m->q)) {
         m->flag = 0; // if the queue is empty then the lock is unlocked
     } else {
@@ -329,4 +332,63 @@ void unlock(lock_t *m) {
     m->guard = 0;
 }
 ```
-- 5 >> 2 = 20
+
+- Fairness
+  - A lock is fair if it guarantees that threads acquire the lock in the order in which they request it
+  - A lock is unfair if it does not guarantee that threads acquire the lock in the order in which they request it
+
+---
+
+Date: **November 4th, 2022**
+
+**Lock with Futex**
+
+```c
+void mutex_lock(int *mutex) {
+    int v;
+    // sets msb to 1, then it returns the old value
+    // if the old value was 0 that means the lock was unlocked
+    if (atomic_bit_test_and_set(mutex, 3) == 0) {
+        return;
+    }
+  
+    // sets LSB to 1 by adding 1
+    atomic_increment(mutex);
+    while (1) {
+  
+      // checks again to see if the bit is set
+      if (atomic_bit_test_and_set(mutex, 3) == 0) {
+        // if the state here would have to be 0001 so you would want to decrement it
+            atomic_decrement(mutex);
+            return;
+      }
+  
+        // in c ints are signed by deafult
+        // so if we have 4 bits for exmaple
+        // 1  0  0  1
+        // First bit is the sign bit
+        // would be -1
+  
+        // this is going to deref the mutex 
+        v = *mutex;
+  
+        // checks to see if the value is negative. If the lock is aquired the bit should look like 1001 == -2
+        if (v >= 0)
+            continue;
+  
+         // a futex wait is a system call that will put the thread to sleep
+        futex_wait(mutex, v);
+    }
+}
+
+void mutex_unlock(int *mutex) {
+    /* Adding 0x80000000 to the counter results in 0 if and only if
+    there are not other interested threads. */
+    if (atomic_add_zero(mutex, 0x8000)) {
+        // overflow occurs 
+        return;
+    }
+  
+    futex_wake(mutex, 1);
+}
+```
