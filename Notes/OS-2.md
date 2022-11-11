@@ -392,3 +392,241 @@ void mutex_unlock(int *mutex) {
     futex_wake(mutex, 1);
 }
 ```
+
+---
+
+Date: **November 7th, 2022**
+
+### Producer Consumer Problem with mermaid
+
+````mermaid
+graph LR
+A(O) --> B[Producer] B[Producer] --> C[O]
+C[O] --> D[Consumer]1
+B[Producer] -->A[O]
+
+````
+
+### Producer Consumer Problem with C (*Unbounded*)
+
+```c
+int buffer[CAP]
+int tail_idx = 0;
+int head_idx = 0;
+int len = 0;
+
+void put(int value) {
+    buffer[tail_idx] = value;
+    tail_idx = (tail_idx + 1);
+    len++;
+}
+
+int get() {
+    int value = buffer[head_idx];
+    head_idx = (head_idx + 1);
+    len--;
+    return value;
+}
+
+cond_t not_empty;
+mutex_t mutex;
+
+void *producer(void *arg) {
+    int i;
+    for (i =0; i < loops; i++) {
+        Pthread_mutex_lock(&mutex);
+        put(i);
+        Pthread_cond_signal(&not_empty);
+        Pthread_mutex_unlock(&mutex);
+    }
+}
+
+void *consumer(void *arg) {
+    int i;
+    for (i = 0; i < loops; i++) {
+        Pthread_mutex_lock(&mutex);
+      
+        // you use a while loop instead of an if statement because you want to make sure that the condition is true and it was not a spurious wakeup
+        while (len == 0) {
+            // puts thread into blocked state and unlocks the mutex
+            Pthread_cond_wait(&not_empty, &mutex);
+        }
+        int value = get();
+        Pthread_mutex_unlock(&mutex);
+    }
+}
+```
+
+### Producer Consumer Problem with C (*Bounded*)
+
+````c
+int buffer[CAP]
+int tail_idx = 0;
+int head_idx = 0;
+int len = 0;
+
+void put(int value) {
+    buffer[tail_idx] = value;
+    tail_idx = (tail_idx + 1) % CAP;
+    len++;
+}
+
+int get() {
+    int value = buffer[head_idx];
+    head_idx = (head_idx + 1) % CAP;
+    len--;
+    return value;
+}
+
+cond_t not_empty, not_full;
+mutex_t mutex;
+
+void *producer(void *arg) {
+    int i;
+    for (i =0; i < loops; i++) {
+        Pthread_mutex_lock(&mutex);
+        while (len == CAP) {
+            Pthread_cond_wait(&not_full, &mutex);
+        }
+        put(i);
+        Pthread_cond_signal(&not_empty);
+        Pthread_mutex_unlock(&mutex);
+    }
+}
+
+void *consumer(void *arg) {
+    int i;
+    for (i = 0; i < loops; i++) {
+        Pthread_mutex_lock(&mutex);
+      
+        // you use a while loop instead of an if statement because you want to make sure that the condition is true and it was not a spurious wakeup
+        while (len == 0) {
+            // puts thread into blocked state and unlocks the mutex
+            Pthread_cond_wait(&not_full, &mutex);
+        }
+        int value = get();
+        Pthread_cond_signal(&not_empty);
+        Pthread_mutex_unlock(&mutex);
+    }
+}
+````
+
+- Unbounded vs Bounded
+  - Unbounded
+    - Unbounded means that you can put as many items in the buffer as you want
+  - Bounded
+    - Bounded means that you can only put a certain amount of items in the buffer before you have to wait for the consumer to consume some of the items
+
+---
+
+Date: November 9th, 2022
+
+### Semaphores
+
+- Introduced by Dijkstra in 1965
+- A semaphore is a variable that is used to control access to a common resource by multiple processes in a concurrent system such as a multitasking operating system
+- Conceptually, combine counter with wait and signal operations
+
+#### Semaphore operations (All atomic)
+
+- Keeps track of how many threads are waiting essentially
+
+````c
+void down(semaphore_t *s) {
+    s->value =- 1;
+    if (s->value < 0) {
+        block(); // puts this thread that is trying to access in a blocked state
+    }
+}
+
+void up(semaphore_t *s) {
+    s->value =+ 1;
+    if (s->value <= 0) {
+        wakeup(); // sends a wakeup signal to the threads that are waiting
+    }
+}
+````
+
+#### Up-to-K Inclusion problem
+
+- The up-to-k inclusion problem is a problem in concurrency theory that asks whether it is possible to implement a concurrent algorithm that guarantees that at most k threads are executing a critical section at any given time
+- The up-to-k inclusion problem is a special case of the mutual exclusion problem
+- K is how many threads are allowed to be in the critical section at a time
+
+````c
+semaphore_t sem;
+sem.value = 2;
+sem.down()
+// some critical section
+sem.up()
+````
+
+#### Semaphore with Producer Consumer
+
+````psedo
+sem = semaphore(0)
+mutex semaphore(1)
+
+ 
+t1                     t2
+mutex.down()   |   mutex.down()
+sem.down()     |   produce()
+consume()      |   mutex.up()
+mutex.up()     |   sem.up()
+
+````
+
+---
+
+Date: November 11th, 2022
+
+## Event-based concurrency
+- basis is *single-threaded* event loop
+```psuedo
+State state; // only loop should change this data
+loop {
+    event = receive_event();
+    if event == EVENT_DONE { break; }
+    handle_event(event);
+}
+```
+- handle_event function processes the event and updates the state
+  - access associated state of event loop 
+  - send events to:
+    - the same loop
+    - other system parts
+- events can represent different action form different actors
+    - user input
+    - network
+    - timers
+    - file system
+    - etc
+- all actions can operate on the same *shared associative state* which simplifies concurrent programing because only loop can access shared state 
+- in simplier terms only one thread handles the data at a time
+
+### Asynchronous I/O
+- event handlers are not supposed to block
+  - operations that block or take long time to compute should be done outside event loop
+- OS provides interfaces for AIO 
+  - send request ; receive acknowledgement
+- technically there are different means to implement AIO
+  - threads
+  - processes
+  - signals
+  - callbacks
+
+### Disadvantages
+- multi-core machines would require multiple event loops
+````mermaid
+graph LR
+A[Event Loop] --> B[Event Loop]
+B --> C[Event Loop]
+C --> D[Event Loop]
+D --> A
+````
+- to share data between event loops you need a pointer to the shared data
+
+#### Implicit Blocking
+- event loop is blocked when it is waiting for an event
+- can happen with page faults, disk I/O, network I/O, etc
+- have to associate state with each event

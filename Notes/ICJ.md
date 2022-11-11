@@ -257,5 +257,146 @@
     - Jury is a tool for the defense to determine whether to file a motion for a new trial
     - Jury is a tool for the prosecution to determine whether to file a motion for a new trial
       - Minimum qualifications for jury service vary by jurisdiction
+    - Only men were able to solve on juries up until the 1970s
+    - The list of jurors are called the venire
+***
+Date: November 8th, 2022
 
+## The Victim
+- Not all crimes have clearly identifiable victims
+- Victims are often the most forgotten people in the courtroom
+- Difficulties encounter by victims in the trial process compared to a second victimization by the criminal justice system
     
+## The Defendant
+- The defendant is the person who is accused of committing a crime
+- Generally, defendant must be presented at their trials
+- A defendant who is present at the start of a the trial may be voluntarily absent after hte trail has commenced
+- This does not hold if absence is due to escape or failure to appear
+- Majority of defendants, are poor, uneducated, and/or relatively powerless
+- Tendency of other to assume that anyone on trail must be guilty 
+- Defendants can influence courtroom events by exercising choice in
+  - Selecting and retaining counsel
+  - Planing a defense strategy
+  - Deciding what information to provide the defense team
+  - Deciding what plea to enter
+  - Deciding whether to testify personally
+  - Determine whether to file an appeal if convicted
+
+## Spectators and the Press
+- Often overlooked because lack an official role in the courtroom
+- Presence is supported by the 6th Amendment right to a public trial
+- Press reports cna create problems
+  - Pretrial publicly can bias potential jurors
+  - News reports may influence non-sequestered jurors
+- Ways to insure fair trial and impartial jury after pretrial release of information
+  - Change of venue
+  - Trial postponement
+  - Jury selection and screening
+- Cameras may be allowed in state but never in federal court
+
+## The Criminal Trial Procedure
+- Highly formalized and structured; trials a re also affected by informal rules and professional expectations
+- THe course of the trial is determined by rules of evidence and other procedural guidelines
+  - Motion to suppress
+  - Motion for a change of venue
+  - Motion for discovery
+  - Motion for recusal
+  - Motion for expenses of experts 
+
+***
+Date: November 10th, 2022
+
+## Nature and Purpose of the Criminal Trial
+- The primary purpose of the criminal trial is to determine whether the defendant is guilty or not guilty
+    - Factual guilt 
+      - The defendant committed the crime (actual commission of the crime) 
+    - Legal guilt
+      - The defendant must be proven guilty beyond a reasonable doubt
+- Adversial system
+  - Two sided struggle between the prosecution and the defense
+
+## Trial Initiation
+- Sixth Amendment right to a speedy trial
+- Adjudicate (formal judement of guilt or innocence) ** LATIN WORD **
+- Bench Trial (only the judge)
+  - Jury trial - 12 jurors
+- Perjury
+  - Lying under oath
+
+## Jury Selection
+`````mermaid 
+graph TD
+A[Sixth Ammend right to impartial jury, Venire - the list of potential juror] --> B[Attorneys use challenges to remove potential jurors]
+B --> C[Three types of challenges recognized]
+C -- Challenged for the array, Challenge for cause, Peremptory challenge --> D[During jury selection, attorneys question potential jurors in a process known as voir dire examination]
+`````
+
+## Jury Selection and Race
+- Race alone cannot provide the basis for jury selection
+- Juries may not be intentionally selected for racial imbalance
+
+## Opening Statements
+- Opening statements are made by the prosecution and defense attorneys
+- Opening statements are made to the jury
+- Its the who, what, when, where, and why of the case
+- **In Pennsylvania, the prosecution (DA) goes first**
+
+## Presentation of Evidence
+- Evidence is the information that is presented to the jury
+- Evidence is presented in the form of testimony and physical evidence
+- First, the state has the opportunity to present its case
+
+## Types of evidence
+- Direct evidence
+  - Evidence that directly proves the fact in question
+- Circumstantial evidence
+  - Evidence that indirectly proves the fact in question
+- Real evidence
+  - Evidence that is tangible and can be seen, heard, or touched
+- Hear say evidence
+  - Third party testimony that is not based on personal knowledge (not admissible)
+- Dying declaration
+  - A statement made by a person who is dying or who is about to die
+- Excited utterance
+  - A statement made by a person who is in a state of extreme emotion
+- Reputation concerning character
+  - Evidence that a person has a certain reputation
+
+
+## Testimony of Witnesses
+- Testimony is the oral evidence offered by sworn witness on the stand during the trial
+- The cheif means by which evidnece is intoruced at trial
+- Before witness may testify, questiong attorney must estbalish witness compotence to testify
+- Key decision for defense attoruney is whether to put the defendent ton the stand
+- Examine witness
+    - Direct examination
+    - Cross examination
+    - Redirect examination
+    - Recross examination
+- Witness may commit perjury if they lie under oath and intentionally mislead the jury
+
+## Closing Arguments
+- Closing arguments are the last opportunity for the prosecution and defense to present their case to the jury
+- States vary as to the order but nearly all allow the defense to speak first
+- PA: Defense first; Prosecution second
+
+**Potential Bonus**
+- General demurrer
+  - Last chance for the defense to challenge the sufficiency of the evidence
+
+## Reaching a verdict
+- Pattern jury instructions
+  - Written instructions that are given to the jury by the judge
+- Beyond Reasonable doubt - burden of proof
+- Jury deliberation - foreperson selected; private
+- Sequestered - isolated; not bothers
+- Deadlocked or hung jury
+- Mistrial
+- Allen charge
+  - A charge given by the judge to the jury when the jury is deadlocked
+  - The judge instructs the jury to continue deliberating until they reach a verdict
+- Acquit
+  - cannot be retried (exceptions)
+- Reading of the verdict
+- Capital case: Bifurcated
+  - Guilt and sentencing  phases

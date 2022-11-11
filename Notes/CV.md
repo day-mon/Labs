@@ -62,9 +62,6 @@ for m in range(0, M):
         h[img[m, n]] += 1
         integral_total += u
 ```
-ω σ
-⊂
-≝
 
 
 ## Edge-based segmentation
@@ -91,3 +88,10 @@ for m in range(0, M):
 4. Two thresholds
 5. Edge Tracking by Hysteresis
 
+***
+Date: November 7, 2022
+
+## Morphological Operations
+- Morphological operations are based on the idea of structuring elements
+- Structuring elements are small images that are used to process images
+- Structuring elements are usually small, square images
