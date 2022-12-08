@@ -400,3 +400,118 @@ C -- Challenged for the array, Challenge for cause, Peremptory challenge --> D[D
 - Reading of the verdict
 - Capital case: Bifurcated
   - Guilt and sentencing  phases
+
+
+## Problems with the Jury System
+- Some questions about the ability of the American jury system to do its job
+  - Difficult to understand modern legal complexities
+  - Difficult to operate emotions and fact
+  - Jury may be dominated by members with forceful personalities
+  - Jurors may suffer from inattention
+  - May be unable to understand expert witness testimony
+  - Jurors may fear personal retaliation 
+
+--- 
+### December 6th, 2022
+
+## Evolution of Juvenile Court
+- Parens Patriae
+  - The state is the parent of the child
+- Applied term "delinquent" rahter than "criminal" to avoid stigma
+
+# Establishing Juvenile Rights
+- Kent v. United States
+  - 1966
+  - Juveniles now have rights
+  - Violated their 6th Amendment right
+- In re Gault (1967)
+  - Made obscene phone calls. Was detained. 
+  - Parents not informed of hearing, no charges in writing, no counsel, no recording but  found guilty and sent to Industrial School until 21
+  
+**In re = Latin for "in the matter of"**
+
+- In re Winship (1970)
+  - Juvenile court must prove guilt beyond a reasonable doubt
+  - Accused of stealing 112 from a purse at the YMC.
+  - US Supreme Court ruled that the juvenile court must prove guilt beyond a reasonable doubt
+- McKeiver v. Pennsylvania (1971)
+  - Juvenile court must provide counsel for indigent juveniles
+  - Wanted jury as his peers
+- Roper v. Simmons (2005)
+  - Death penalty for juveniles is unconstitutional
+  - Planned by 17 year old to kill his 15 year old friend
+  - 15 year old sentenced to life in prison
+  - 17 year old was sentenced to death
+  - Tried as an adult, received death penalty.
+  - Rule of law: No death penalty for juveniles
+- Graham v. Florida (2010)
+  - Juveniles cannot be sentenced to life without parole
+  - 17 year old convicted of armed robbery and sentenced to life without parole
+  - Rule of law: No life without parole for juveniles
+- Miller v. Alabama (2012)
+  - 14 year old murdered a store clerk.
+  - Sentenced to life in prison without parole
+  - Rule of law: No mandatory life sentences for juveniles
+  - Violates 8 amendment
+- Montgomery v. Louisiana (2016)
+  - Juveniles cannot be sentenced to life without parole for non-homicide crimes
+  - 14 year old convicted of armed robbery and sentenced to life without parole
+  - Rule of law: No life without parole for juveniles for non-homicide crimes
+    - Violates 8 amendment
+
+## Contemporary Juvenile Justice System
+- Offenders are typically considered individuals who have committed a crime that are 18 or younger
+- Refers to all acts that not murder
+- Status offenses: acts illegal only for juveniles - such as running away, truancy, curfew, etc..
+
+- Juvenile Justice and Delinquency Prevention Act of 1974
+  - Designed to prevent delinquency and improve juvenile justice system
+  - As a result Office of Juvenile and Delinquency Prevention was established to support community efforts to provide treatment and rehabilitation programs - publishes Journal of Juvenile Justice, providing research, strategies and tactics for practitioners and scholars
+- Rates of juvenile delinquency
+  - In 1980s and 1990s, juvenile offending rates increased substantially
+  - Urban areas showed the highest arrest rates for juvenile due to crack epidemic, accessibility of fire arms and increased in gang activity
+  - Public fear led the demand for more punitive justice for juveniles
+- Superpredators
+  - During the 1990s, members of the public and politicians believe the country was headed into a never-ended wave of juvenile violence that would soon spin out of control
+  - Fear of juvenile was furthered promulgated by the introduction of the "juvenile superpreadtor" concept by John DiIulio of Princeton University. President used it in his speeches
+  - John DiIulio: "The superpredator is a young person who has no conscience, no empathy, and no regard for human life. He will kill anyone, anytime, anywhere, for no reason at all. He is a predator who has learned to be more dangerous than any animal in the jungle. He is a superpredator."
+  - He was wrong
+
+## Steps in the Juvenile Justice Process
+- Police are usually the first to come in contact with juvenile offenders
+- Juvenile present special challenges:
+  - Special rules seperated by sight and sound (from adults)
+  - No more than 6 hours
+  - No interviews without parental consent
+  - No secure holding
+- Court
+  - The juvenile court is a specialized court that deals with juvenile offenders
+- Steps in the process have the different names but equal meaning
+- Diversion
+  - decision to "divert" or keep juvenile out of the formal court system
+
+1. Intake
+2. Deferred status
+3. Consent scree Detention hearing
+4. Adjudication
+5. Disposition hearing
+6. Predisposition hearing
+7. Aftercare
+8. Judicial waivers
+9. Direct files
+10. Automatic waivers
+11. Reverse transfers
+
+## Categories of Juvenile Offenders
+- Delinquent
+  - Juvenile who has committed a crime
+- Undisciplined
+  - A child who is behaving in a way that is unacceptable to society
+- Dependent
+  - A child who is in need of care and protection. No parental care or supervision
+- Neglected
+  - A child who is in need of care and protection. Parental care or supervision is available but not provided
+- Abused
+  - Physical, sexual, or emotional abuse of a child by a parent or caretaker
+- Status Offender
+  - A child who has committed an act that is illegal only for juveniles
