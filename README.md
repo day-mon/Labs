@@ -1,4 +1,4 @@
-# University of Pittsburgh at Johnstown CS (2019 - 2023)
+# University of Pittsburgh at Johnstown CS (2019 - 2022)
 This repository contains most of the code I wrote for my CS classes at the University of Pittsburgh at Johnstown. I'm currently a senior, so I'm not sure how much longer I'll be adding to this repository.
 
 ## Classes
